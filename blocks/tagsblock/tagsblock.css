@@ -1,15 +1,57 @@
-.right-container .default-content-wrapper p strong{
-    background-color: aqua;
+.section.right-container.tagsblock-container {
+  padding-top: 30px;
 }
-
-.tags-list > li{
-    width: 300px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #201D1D;
-    border-radius: 17px;
-    opacity: 1;
-    list-style-type: none;
-    text-align: center;
-    margin: 10px 10px;
-    font-weight:600;
+.section.right-container.tagsblock-container p:nth-child(1) {
+  text-align: left;
+  font-family: "Roboto Medium";
+  font-size: 26px;
+  line-height: 32px;
+  color: #000000;
+}
+.section.right-container.tagsblock-container p:nth-child(2) {
+  padding-top: 16px;
+  text-align: left;
+  font: normal normal normal 16px/32px "Roboto Regular";
+  letter-spacing: 0px;
+  color: #1d1d1d;
+  opacity: 1;
+}
+.tagsblock-wrapper {
+  margin-top: 38pxpx;
+}
+.tags-list li {
+  text-align: left;
+  font-family: "Roboto Medium";
+  font-size: 14px;
+  line-height: 19px;
+  padding: 7px 17px;
+  letter-spacing: 0px;
+  color: #454546;
+  list-style-type: none;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #000000;
+  border-radius: 17px;
+  opacity: 1;
+  display: inline-block;
+  margin-top: 22px;
+}
+.tags-list li:nth-child(even) {
+  margin-right: 0;
+}
+.tags-list li:nth-child(odd) {
+  margin-right: 20px;
+}
+.suggestedfeatures-list li {
+  list-style-type: none;
+  padding: 30px 0 29px 32px;
+  background: #f5f5f5 0% 0% no-repeat padding-box;
+  border-radius: 6px;
+  opacity: 1;
+  text-align: left;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #292985;
+  margin-bottom: 20px;
+  font-family: "Roboto Medium";
 }
