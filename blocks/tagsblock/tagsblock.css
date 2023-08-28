@@ -64,6 +64,7 @@
   background: #292985;
   display: inline-block;
   margin-top: 24px;
+  margin-bottom: 30px;
 }
 .section.right-container.tagsblock-container .button-container a {
   text-align: left;
@@ -77,10 +78,8 @@
   margin-top: 50px;
   margin-bottom: 30px;
 }
-.tagsblock-title .title-list {
-  list-style-type: none;
-}
-.tagsblock-title .title-list li {
+
+.tagsblock-title p {
   text-align: left;
   font-family: "Roboto Medium";
   font-size: 26px;
@@ -94,5 +93,8 @@
   .tagsblock-title {
     margin-top: 44px;
     margin-bottom: 35px;
+  }
+  .tagsblock-title p {
+    font-size: 20px;
   }
 }
