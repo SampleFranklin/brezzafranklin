@@ -48,3 +48,8 @@
 .breadcrumb ul {
   padding: 20px 0;
 }
+@media screen and (max-width: 1023px) {
+  .breadcrumb ul {
+    padding: 10px 0;
+  }
+}

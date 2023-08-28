@@ -1,14 +1,18 @@
 .section.right-container.tagsblock-container {
   padding-top: 30px;
 }
-.section.right-container.tagsblock-container p:nth-child(1) {
+.section.right-container.tagsblock-container
+  .default-content-wrapper:nth-child(1)
+  p:nth-child(1) {
   text-align: left;
   font-family: "Roboto Medium";
   font-size: 26px;
   line-height: 32px;
   color: #000000;
 }
-.section.right-container.tagsblock-container p:nth-child(2) {
+.section.right-container.tagsblock-container
+  .default-content-wrapper:nth-child(1)
+  p:nth-child(2) {
   padding-top: 16px;
   text-align: left;
   font: normal normal normal 16px/32px "Roboto Regular";
@@ -54,4 +58,41 @@
   color: #292985;
   margin-bottom: 20px;
   font-family: "Roboto Medium";
+}
+.section.right-container.tagsblock-container .button-container {
+  padding: 14px 40px;
+  background: #292985;
+  display: inline-block;
+  margin-top: 24px;
+}
+.section.right-container.tagsblock-container .button-container a {
+  text-align: left;
+  font: normal normal bold 14px/19px "Roboto Bold";
+  letter-spacing: 0.56px;
+  color: #ffffff;
+  text-transform: uppercase;
+  opacity: 1;
+}
+.tagsblock-title {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.tagsblock-title .title-list {
+  list-style-type: none;
+}
+.tagsblock-title .title-list li {
+  text-align: left;
+  font-family: "Roboto Medium";
+  font-size: 26px;
+  line-height: 48px;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1023px) {
+  .tagsblock-title {
+    margin-top: 44px;
+    margin-bottom: 35px;
+  }
 }
