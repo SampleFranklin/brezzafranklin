@@ -1,32 +1,51 @@
-$(document).ready(function(){
-  
-  $('.multiple-items').slick({
+/*   $(".multiple-items").slick({
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
-    arrows:true
-  })
+    arrows: true,
+  });
 
-  $('.stories').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows:true,
-  }).slick('refresh')
+  $(".stories")
+    .slick({
+      infinite: true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      arrows: true,
+    })
+    .slick("refresh");
 
   setTimeout(() => {
-    $('.stories').slick('refresh');
-  }, 100);
-
-});
+    $(".stories").slick("refresh");
+  }, 100);*/
 
 export default function decorate(block) {
-  block.classList.add('multiple-items');
+  block.classList.add("multiple-items");
+
   [...block.children].forEach((row, i) => {
-    const classes = ['image', 'text'];
+    console.log(row);
+    const classes = ["image", "text"];
     classes.forEach((e, j) => {
       row.children[j].classList.add(`carousel-${e}`);
     });
   });
-  console.log(block);
 }
+$(document).ready(function () {
+  $(".multiple-items").slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: true,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 391,
+        settings: {
+          arrows: true,
+          slidesToShow: 1,
+          variableWidth: false,
+          slidesToScroll: 3,
+        },
+      },
+    ],
+  });
+});

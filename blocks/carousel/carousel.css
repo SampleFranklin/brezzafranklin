@@ -1,3 +1,22 @@
 .carousel-container {
   clear: both;
 }
+.slick-slide {
+  width: 359px;
+  margin-right: 27px;
+}
+.carousel-wrapper {
+  padding: 0 72px;
+}
+.carousel-container .carousel-text {
+  text-align: left;
+  font: normal normal normal 18px/32px "Roboto Regular";
+  letter-spacing: 0px;
+  color: #201d1d;
+  margin-top: 18px;
+}
+@media screen and (max-width: 1023px) {
+  .carousel-wrapper {
+    padding: 0;
+  }
+}
