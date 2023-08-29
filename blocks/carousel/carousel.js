@@ -1,19 +1,23 @@
-import { createOptimizedPicture } from '../../scripts/lib-franklin.js';
-
 $(document).ready(function(){
+  
   $('.multiple-items').slick({
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     arrows:true
   })
 
   $('.stories').slick({
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    arrows:true
+    arrows:true,
   }).slick('refresh')
+
+  setTimeout(() => {
+    $('.stories').slick('refresh');
+  }, 100);
+
 });
 
 export default function decorate(block) {
