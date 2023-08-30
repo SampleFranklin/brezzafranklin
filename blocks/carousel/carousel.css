@@ -20,3 +20,16 @@
     padding: 0;
   }
 }
+
+.swiper-button-prev,
+.swiper-button-next{
+  background-color: black;
+  position: fixed;
+}
+
+.stories-prev,
+.stories-next{
+  margin-top: 50px;
+  background-color: aqua;
+  position: fixed;
+}
