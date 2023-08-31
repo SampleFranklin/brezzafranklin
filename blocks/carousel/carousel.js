@@ -28,6 +28,8 @@ export default function decorate(block) {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    watchSlidesProgress:true,
+    spaceBetween:20
   //   breakpoints: {
   //     391: {
   //         slidesPerView: 1

@@ -1,13 +1,6 @@
 .carousel-container {
   clear: both;
 }
-.slick-slide {
-  width: 359px;
-  margin-right: 27px;
-}
-.carousel-wrapper {
-  padding: 0 72px;
-}
 .carousel-container .carousel-text {
   text-align: left;
   font: normal normal normal 18px/32px "Roboto Regular";
@@ -33,3 +26,21 @@
   background-color: aqua;
   position: fixed;
 }
+
+.carousel-wrapper{
+  width: 100%;
+}
+.swiper-wrapper {
+  width: 100%;
+}
+.swiper-slide {
+  opacity: 0;
+}
+.swiper-slide-visible{
+  text-align: center;
+  width: auto;
+  border: 2px solid black;
+  opacity: 1;
+}
+
+
