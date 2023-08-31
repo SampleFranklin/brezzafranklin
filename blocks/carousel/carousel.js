@@ -1,7 +1,7 @@
 export default function decorate(block) {
   block.classList.add("swiper-wrapper");
   [...block.children].forEach((row, i) => {
-    row.classList.add('swiper-slide');
+    row.classList.add("swiper-slide");
     const classes = ["image", "text"];
 
     classes.forEach((e, j) => {
@@ -9,12 +9,12 @@ export default function decorate(block) {
     });
   });
 
-  const previousButton = document.createElement('div');
-  const nextButton = document.createElement('div');
+  const previousButton = document.createElement("div");
+  const nextButton = document.createElement("div");
   previousButton.classList.add("swiper-button-prev");
   nextButton.classList.add("swiper-button-next");
 
-  if(block.classList.contains("stories")){
+  if (block.classList.contains("stories")) {
     previousButton.classList.add("stories-prev");
     nextButton.classList.add("stories-next");
   }
@@ -22,19 +22,37 @@ export default function decorate(block) {
   block.parentElement.appendChild(previousButton);
   block.parentElement.appendChild(nextButton);
 
-  const swiper = new Swiper('.carousel-wrapper', {
+  const swiper = new Swiper(".feature .carousel-wrapper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    watchSlidesProgress: true,
+    spaceBetween: "27px",
+    breakpoints: {
+      390: {
+        slidesPerView: 1,
+      },
+      1440: {
+        slidesPerView: 3,
+      },
+    },
+  });
+  new Swiper(".stories .carousel-wrapper", {
     slidesPerView: 3,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-    watchSlidesProgress:true,
-    spaceBetween:20
-  //   breakpoints: {
-  //     391: {
-  //         slidesPerView: 1
-  //     }
-  // }
+    watchSlidesProgress: true,
+    breakpoints: {
+      390: {
+        slidesPerView: 1.4,
+        spaceBetween: "16px",
+      },
+      1440: {
+        slidesPerView: 3,
+      },
+    },
   });
 }
-
