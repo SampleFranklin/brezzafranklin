@@ -187,6 +187,11 @@ header nav .nav-sections ul ::-webkit-scrollbar {
 header nav .nav-sections ul > li {
   color: white;
   font-weight: 700;
+  cursor: pointer;
+}
+
+header nav .nav-sections ul > li :hover{
+  text-decoration: none;
 }
 
 header nav .nav-sections ul > li > ul {
