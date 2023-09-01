@@ -291,22 +291,22 @@ main .section.highlight {
 main {
   margin: 0 12px;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1023px) {
   main {
-    margin: 0 84px;
+    margin: 0 5.8%;
   }
   .authorblock-container {
     overflow: hidden;
   }
   .authorblock-container .default-content-wrapper,
   .section.left-container {
-    width: 732px;
-    margin-right: 132px;
+    width: 59%;
+    margin-right: 10%;
     float: left;
   }
   .authorblock-wrapper,
   .section.right-container {
     float: left;
-    width: 408px;
+    width: 30%;
   }
 }
