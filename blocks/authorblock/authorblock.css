@@ -85,7 +85,10 @@
 .authorblock-redirects ul.redirects-list li {
   display: inline-block;
   padding-right: 15px;
+  width: 37px;
+  height: 37px;
 }
+
 @media screen and (max-width: 1023px) {
   .authorblock-title {
     font-size: 24px;

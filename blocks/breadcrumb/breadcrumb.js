@@ -2,10 +2,7 @@ import createTag from '../../utils/tag.js';
 import { getMetadata } from '../../scripts/lib-franklin.js';
 
 export default function decorate(block) {
-  console.log(block);
-
   const isDocumentationLanding = window.location.pathname === '/docs/';
-
   const list = createTag('ul');
   const home = createTag('li', {}, '<a href="/home" class="breadcrumb-link-underline-effect">Home</a>');
 

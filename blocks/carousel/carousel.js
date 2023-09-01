@@ -33,9 +33,9 @@ export default function decorate(block) {
       390: {
         slidesPerView: 1,
       },
-      1440: {
+      1023:{
         slidesPerView: 3,
-      },
+      }
     },
   });
   new Swiper(".stories .carousel-wrapper", {
@@ -50,9 +50,9 @@ export default function decorate(block) {
         slidesPerView: 1.4,
         spaceBetween: "16px",
       },
-      1440: {
+      1023:{
         slidesPerView: 3,
-      },
+      }
     },
   });
 }
