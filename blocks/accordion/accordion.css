@@ -14,7 +14,9 @@
   color: #1d1d1d;
 }
 .accordion-container .default-content-wrapper p:first-child {
-  font: normal normal medium 26px/48px "Roboto Medium";
+  font-family: "Roboto Medium";
+  font-size: 26px;
+  font-weight: 48px;
   color: #000;
   padding-bottom: 16px;
 }

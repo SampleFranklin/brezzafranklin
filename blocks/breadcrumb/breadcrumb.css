@@ -27,8 +27,14 @@
 }
 
 .breadcrumb ul li:not(:last-child) a::after {
-  content: ">";
-  padding: 0 20px;
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin: 0 10px; /* Adjust the margin as needed */
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid #d1d1d1;
+  border-top: 6px solid transparent;
 }
 
 .breadcrumb ul li a {

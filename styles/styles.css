@@ -20,11 +20,7 @@
   --text-color: #000;
 
   /* fonts */
-  --body-font-family: "helvetica neue", helvetica, ubuntu, roboto, noto,
-    sans-serif;
-  --heading-font-family: var(--body-font-family);
-  --fixed-font-family: "Roboto Mono", menlo, consolas, "Liberation Mono",
-    monospace;
+  --body-font-family: "Roboto Regular";
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -171,43 +167,18 @@ main pre {
   white-space: pre;
 }
 
-a:any-link {
-  color: var(--link-color);
+a:hover,
+a {
   text-decoration: none;
 }
-
-a:hover {
-  text-decoration: underline;
-  color: var(--link-hover-color);
-}
-
-/* buttons */
-a.button:any-link,
-button {
-  /* font-family: var(--body-font-family);
-  display: inline-block;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: 2px solid transparent;
-  padding: 5px 30px;
-  text-align: center;
-  font-style: normal;
-  font-weight: 600;
-  cursor: pointer;
-  color: var(--background-color);
-  background-color: var(--link-color);
-  margin: 16px 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border-radius: 30px;*/
+ul {
+  list-style-type: none;
 }
 
 a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
   cursor: pointer;
 }
 
@@ -222,41 +193,6 @@ button.secondary {
   background-color: unset;
   border: 2px solid currentcolor;
   color: var(--text-color);
-}
-
-main input {
-  font-size: 1.25rem;
-  width: 100%;
-  max-width: 50rem;
-  display: block;
-  margin-bottom: 1rem;
-  padding: 0.75rem 0.6rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  border: 1px solid var(--text-color);
-  color: var(--text-color);
-  background-color: var(--background-color);
-}
-
-main input:hover {
-  border: 1px solid var(--text-color);
-}
-
-main blockquote {
-  font-style: italic;
-  margin: 3rem;
-  text-indent: -1rem;
-  hanging-punctuation: first;
-}
-
-main blockquote p::before {
-  content: "“";
-  line-height: 0;
-}
-
-main blockquote p::after {
-  content: "”";
-  line-height: 0;
 }
 
 main img {
@@ -274,17 +210,6 @@ main img {
 .icon svg {
   height: 100%;
   width: 100%;
-}
-
-/* section metadata */
-main .section.highlight {
-  background-color: var(--highlight-background-color);
-}
-
-/* dark theme */
-.dark {
-  color: white;
-  background: black;
 }
 
 /* custom css changes for layout */

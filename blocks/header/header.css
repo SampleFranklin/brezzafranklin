@@ -58,6 +58,7 @@ header nav p {
 
 header nav a:any-link {
   color: currentcolor;
+  text-decoration: none;
 }
 
 /* hamburger */
@@ -181,7 +182,7 @@ header nav .nav-sections ul {
   display: flex;
   overflow-x: scroll;
 }
-header nav .nav-sections ul ::-webkit-scrollbar {
+header nav .nav-sections ul::-webkit-scrollbar {
   display: none;
 }
 header nav .nav-sections ul > li {

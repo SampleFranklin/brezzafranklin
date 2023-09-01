@@ -59,6 +59,13 @@
   margin-bottom: 20px;
   font-family: "Roboto Medium";
 }
+
+.suggestedfeatures-list li::after {
+  content: url(../../styles/icons/arrow-down-left.svg);
+  transform: rotate(-90deg);
+  margin-right: 24px;
+  float: right;
+}
 .section.right-container.tagsblock-container .button-container {
   padding: 14px 40px;
   background: #292985;

@@ -79,8 +79,9 @@
 .authorblock-redirects {
   margin-top: 32px;
 }
-.authorblock-redirects ul {
-  list-style-type: none;
+.authorblock-redirects ul img {
+  width: 37px;
+  height: 37px;
 }
 .authorblock-redirects ul.redirects-list li {
   display: inline-block;
