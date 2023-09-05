@@ -21,7 +21,7 @@
   opacity: 1;
 }
 .tagsblock-wrapper {
-  margin-top: 38pxpx;
+  margin-top: 38px;
 }
 .tags-list li {
   text-align: left;
@@ -32,12 +32,12 @@
   letter-spacing: 0px;
   color: #454546;
   list-style-type: none;
-  background: #ffffff 0% 0% no-repeat padding-box;
   border: 1px solid #000000;
   border-radius: 17px;
   opacity: 1;
   display: inline-block;
   margin-top: 22px;
+  cursor: pointer;
 }
 .tags-list li:nth-child(even) {
   margin-right: 0;
@@ -58,8 +58,8 @@
   color: #292985;
   margin-bottom: 20px;
   font-family: "Roboto Medium";
+  cursor: pointer;
 }
-
 .suggestedfeatures-list li::after {
   content: url(../../styles/icons/arrow-down-left.svg);
   transform: rotate(-90deg);
