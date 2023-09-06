@@ -225,13 +225,14 @@ main {
   }
   .authorblock-container .default-content-wrapper,
   .section.left-container {
-    width: 59%;
+    width:57.5%;
     margin-right: 10%;
     float: left;
+    padding-top: 40px;
   }
   .authorblock-wrapper,
   .section.right-container {
     float: left;
-    width: 30%;
+    width: 32.1%;
   }
 }
