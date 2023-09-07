@@ -28,7 +28,7 @@ export default async function decorate(block) {
       const propertydiv = document.createElement('div');
       propertydiv.classList.add(`col-`+row.children[0].innerHTML.replace(/\s+/g, "-").toLowerCase());
 
-      const colHeading = document.createElement('h3');
+      const colHeading = document.createElement('p');
       colHeading.setAttribute('id',row.children[0].innerHTML.replace(/\s+/g, "-").toLowerCase());
       colHeading.innerHTML = row.children[0].innerHTML;
       propertydiv.appendChild(colHeading);
@@ -45,7 +45,7 @@ export default async function decorate(block) {
 
     // Editing SocialBlock DIV
     const socialCol = document.createElement('div');
-    socialCol.classList.add('social-col');
+    socialCol.classList.add('col-social');
     const socialDiv = footer.querySelector('.socialblock');
 
     [...socialDiv.children].forEach((row) => {
@@ -71,6 +71,8 @@ export default async function decorate(block) {
           socialCol.appendChild(propertydiv);
       }
     })
+    //to put social col in newDiv itself.
+    newDiv.appendChild(socialCol);
 
     // Editing Footenote DIV
     const footnoteDiv = footer.querySelector('.footnote > div > div');
@@ -88,7 +90,7 @@ export default async function decorate(block) {
     // replace with new markup.
     footerColDiv.innerHTML = '';
     footerColDiv.append(newDiv);
-    footerColDiv.append(socialCol);
+    // footerColDiv.append(socialCol);
     footerColDiv.append(footnoteDiv);
 
     // without wrapper
@@ -130,7 +132,15 @@ export default async function decorate(block) {
         footerBarDiv.appendChild(propertydiv);
       }
     })
-    block.appendChild(footerContent);
+
+    // To add wrapper on footer-content div
+    const footerContentWrapper = document.createElement('div');
+    footerContentWrapper.classList.add("footer-content-wrapper");
+    block.appendChild(footerContentWrapper);
+    footerContentWrapper.appendChild(footerContent);
+    
+    // ** Without wrapper**
+    // block.appendChild(footerContent);
     block.appendChild(footerBarDiv);
     // block.appendChild(footerBar);
     decorateIcons(footer);
