@@ -12,3 +12,11 @@ sampleRUM('cwv');
 // var script1 = document.createElement('script');
 // script1.src = "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js";
 // document.getElementsByTagName('head')[0].appendChild(script1);
+/* const tagList = document.getElementById("tags-list");
+if (tagList) {
+    tagList.addEventListener("click", function (e) {
+        if (e.target.nodeName === 'LI') {
+            e.target.classList.toggle("bg-blue");
+        }
+    });
+} */ 
