@@ -138,10 +138,16 @@ export default async function decorate(block) {
     footerContentWrapper.classList.add("footer-content-wrapper");
     block.appendChild(footerContentWrapper);
     footerContentWrapper.appendChild(footerContent);
+
+    // To add wrapper on footer-bar div
+    const footerBarWrapper = document.createElement('div');
+    footerBarWrapper.classList.add("footer-bar-wrapper");
+    block.appendChild(footerBarWrapper);
+    footerBarWrapper.appendChild(footerBarDiv);
     
     // ** Without wrapper**
     // block.appendChild(footerContent);
-    block.appendChild(footerBarDiv);
+    // block.appendChild(footerBarDiv);
     // block.appendChild(footerBar);
     decorateIcons(footer);
   }
