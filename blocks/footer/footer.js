@@ -36,8 +36,11 @@ export default async function decorate(block) {
       const redirectList = document.createElement('ul');
       redirectList.classList.add('col-list-content');
       const redirectL = row.children[1].children;
-      for(var link of redirectL){
-          redirectList.innerHTML = link.innerHTML;
+      for(var lists of redirectL){
+        [...lists.children].forEach((li) => {
+          li.classList.add("accord");
+        })
+        redirectList.innerHTML = lists.innerHTML;
       }
       propertydiv.appendChild(redirectList);
       newDiv.appendChild(propertydiv);
@@ -145,6 +148,14 @@ export default async function decorate(block) {
     block.appendChild(footerBarWrapper);
     footerBarWrapper.appendChild(footerBarDiv);
     
+    // var test = document.querySelectorAll(".col-list-content");
+    // test.addEventListener("click", function(e) {
+    //   console.log("click: " + e.target.tagName);
+    //   var selected = test.querySelector("li.selected");
+    //   if (selected) selected.classList.toggle("selected");
+    //   e.target.classList.add("selected");
+    // });
+    // console.log(test);
     // ** Without wrapper**
     // block.appendChild(footerContent);
     // block.appendChild(footerBarDiv);
