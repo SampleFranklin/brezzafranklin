@@ -76,6 +76,7 @@
 .section.right-container.tagsblock-container .button-container {
 
   background: #292985;
+  display: inline-block;
 
 }
 

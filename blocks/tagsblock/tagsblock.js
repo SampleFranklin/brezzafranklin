@@ -26,6 +26,3 @@ export default function decorate(block) {
     });
     block.innerHTML = blockAuthor.innerHTML;
 }
-function responding() {
-    alert(1)
-}
