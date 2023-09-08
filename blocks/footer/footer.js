@@ -26,15 +26,19 @@ export default async function decorate(block) {
 
     [...footerColDiv.children].forEach((row) => {
       const propertydiv = document.createElement('div');
-      propertydiv.classList.add(`col-`+row.children[0].innerHTML.replace(/\s+/g, "-").toLowerCase());
+      propertydiv.classList.add(`col-`+row.children[0].innerHTML.replace(/\s+/g, "-").toLowerCase(),'col-accordion');
 
       const colHeading = document.createElement('p');
       colHeading.setAttribute('id',row.children[0].innerHTML.replace(/\s+/g, "-").toLowerCase());
+      colHeading.classList.add('col-list-heading');
       colHeading.innerHTML = row.children[0].innerHTML;
       propertydiv.appendChild(colHeading);
 
       const redirectList = document.createElement('ul');
       redirectList.classList.add('col-list-content');
+      
+      // redirectList.id = 'col-list-content'
+
       const redirectL = row.children[1].children;
       for(var lists of redirectL){
         [...lists.children].forEach((li) => {
@@ -62,7 +66,7 @@ export default async function decorate(block) {
           propertydiv.classList.add(row.children[0].innerHTML.replace(/\s+/g, "-").toLowerCase());
 
           const redirectList = document.createElement('ul');
-          redirectList.classList.add('list-content');
+          redirectList.classList.add('list-content');;
 
           const redirectL = row.children[1].children;
           for(var link of redirectL){
@@ -148,13 +152,6 @@ export default async function decorate(block) {
     block.appendChild(footerBarWrapper);
     footerBarWrapper.appendChild(footerBarDiv);
     
-    // var test = document.querySelectorAll(".col-list-content");
-    // test.addEventListener("click", function(e) {
-    //   console.log("click: " + e.target.tagName);
-    //   var selected = test.querySelector("li.selected");
-    //   if (selected) selected.classList.toggle("selected");
-    //   e.target.classList.add("selected");
-    // });
     // console.log(test);
     // ** Without wrapper**
     // block.appendChild(footerContent);

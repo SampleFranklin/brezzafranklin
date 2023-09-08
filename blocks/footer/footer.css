@@ -12,3 +12,20 @@ footer .footer {
 footer .footer p {
   margin: 0;
 }
+
+/* li.accord p{
+  display: none;
+}
+
+ul.accord.selected p{
+  display: block;
+}
+
+/* It's a good idea to add this negative style too */
+/* ul.accord:not(.selected) p {
+  display: none;
+}
+
+li.accord {
+  background: grey;
+} */ 
