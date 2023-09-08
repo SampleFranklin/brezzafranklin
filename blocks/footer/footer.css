@@ -3,6 +3,9 @@
   color: #fff;
   padding: 3.5rem 5.25rem .625rem;
 }
+.footer-content *{
+  box-sizing: border-box;
+}
 .footer-cols{
   display: flex;
 }
@@ -237,11 +240,22 @@ max-width:22%
     padding-right: .9375rem
   }
 
-  /* footer .footer-section .row .fs-col-6 .fs-col-4.footer-links:last-child h4 {
+  .footer-cols{
+    flex-direction: column;
+  }
+  .col-corporate ,.col-sales ,.col-more  {
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    max-width: 100%;
+    position: relative;
+    width: 100%
+}
+  .col-corporate p,.col-sales p,.col-more p {
       border-bottom: .0625rem solid #3b3f40
   }
 
-  footer .footer-section .row .fs-col-6 .fs-col-4.footer-links h4 {
+ .col-corporate p,.col-sales p,.col-more p {
       border-top: .0625rem solid #3b3f40;
       color: #fff;
       cursor: pointer;
@@ -258,7 +272,7 @@ max-width:22%
       text-transform: uppercase
   }
 
-  footer .footer-section .row .fs-col-6 .fs-col-4.footer-links h4:after {
+  .col-corporate p:after,.col-sales p:after,.col-more p:after {
       background-color: #2c2c2c;
       background-image: url(../../../etc.clientlibs/msil/clientlibs/clientlib-site/resources/images/plus.webp);
       background-size: 100%;
@@ -268,7 +282,7 @@ max-width:22%
       width: .625rem
   }
 
-  footer .footer-section .row .fs-col-6 .fs-col-4.footer-links h4.active:after {
+  .col-corporate p.col-accordion:after,.col-sales p.col-accordion:after,.col-more p.col-accordion:after{
       background-color: #2c2c2c;
       background-image: url(../../../etc.clientlibs/msil/clientlibs/clientlib-site/resources/images/minus.webp);
       background-size: 100%;
@@ -278,16 +292,12 @@ max-width:22%
       width: .5625rem
   }
 
-  footer .footer-section .row .fs-col-6 .fs-col-4.footer-links ul {
+  .col-corporate .col-list-content ,.col-sales .col-list-content,.col-more .col-list-content {
       display: none;
       margin-bottom: 1rem
   }
 
-  footer .footer-section .row .fs-col-6 .row {
-      padding: 0
-  }
-
-  footer .footer-section .row .fs-col-4 a {
+  .col-corporate .col-list-content li,.col-sales .col-list-content li, .col-more .col-list-content li{
       color: #fff;
       font-family: Roboto Regular;
       font-size: 1rem;
@@ -297,12 +307,24 @@ max-width:22%
       line-height: 1.3125rem;
       opacity: 1;
       text-align: left;
-      text-transform: capitalize
+      text-transform: capitalize;
+      margin-bottom: .625rem
   }
 
-  footer .footer-section .row .fs-col-4.footer-links ul li {
-      margin-bottom: .625rem
-  } */
+.text p{
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1.3125rem;
+  opacity: 1;
+}
+.social-ctas{
+  display: flex;
+  justify-content: center;
+}
+/* till here */
 
  .social-ctas{
       display: inline-block;
@@ -421,12 +443,19 @@ color:#FFFFFF;
   .footer-bar {
       display:block;
       margin-top: -.3125rem;
-      max-width: 100%;
+      /* max-width: 100%; */
       padding: 0 .9375rem 1.5rem;
       position: relative;
-      text-align: center
+      text-align: center;
+      width:100%;
   }
+.footer-bar-wrapper{
+  height:auto;
+}
 
+.footerbar-list{
+flex-direction: column;
+}
 .footer-bar .copyright-text {
       padding-bottom: 1.5rem;
       padding-right: 0;
@@ -442,7 +471,7 @@ color:#FFFFFF;
       padding-bottom: .625rem
   }
 
-  .footerbar-list ul li  {
+  .footerbar-list  li  {
       color: #fff;
       font-family: Roboto Medium;
       font-size: .875rem;
@@ -452,10 +481,38 @@ color:#FFFFFF;
       line-height: 1.1875rem;
       opacity: 1;
       text-align: center;
-      text-align: left
+      padding-bottom: 0.625rem;
   }
+  .contact-number p,.contact-email p{
+        color: #fff;
+        font-family: Roboto Regular;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1.5rem;
+        margin-top: 2.125rem;
+        opacity: 1;
+        text-align: left;
+        text-align: center
+    } 
+ .col-reach-us .col-list-content li{
+  color: #fff;
+  font-size: 1rem;
+  font-style: normal;
+  letter-spacing: 0;
+  line-height: 1.3125rem;
+  opacity: 1;
+  text-align: left
+ }
 
-  .col-list-content{
+ .col-sales .col-list-content,.col-corporate .col-list-content,.col-more .col-list-content{
     display: none;
   }
+  .col-more,.col-sales,.col-corporate{
+  display: block;
+    padding-left: 0;
+    padding-right: 0;
+
+  } 
 }
