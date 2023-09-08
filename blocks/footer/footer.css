@@ -447,7 +447,6 @@ color:#FFFFFF;
       padding: 0 .9375rem 1.5rem;
       position: relative;
       text-align: center;
-      width:100%;
   }
 .footer-bar-wrapper{
   height:auto;
@@ -511,8 +510,8 @@ flex-direction: column;
   }
   .col-more,.col-sales,.col-corporate{
   display: block;
-    padding-left: 0;
-    padding-right: 0;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem
 
   } 
 }
