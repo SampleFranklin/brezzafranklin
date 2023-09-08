@@ -24,9 +24,15 @@ function handleScreenSizeChange(mediaQuery) {
       executeAccordion();
     }
 }
-  
+
+
 const mediaQuery = window.matchMedia('(max-width: 980px)');
+
 mediaQuery.addEventListener('change', (event) => {
-    handleScreenSizeChange(event.target);
+    alert(mediaQuery.matches);
+    console.log(mediaQuery.matches);
+    if(mediaQuery.matches){
+        handleScreenSizeChange(event.target);
+    }
   });
 handleScreenSizeChange(mediaQuery);
