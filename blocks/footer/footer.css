@@ -29,3 +29,8 @@ ul.accord.selected p{
 li.accord {
   background: grey;
 } */ 
+
+/* add media query */
+.col-list-content{
+  display: none;
+}

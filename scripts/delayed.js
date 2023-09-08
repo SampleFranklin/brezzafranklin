@@ -12,7 +12,8 @@ function executeAccordion(){
         
       heading.addEventListener('click', () => {
         console.log('clicked');
-        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        console.log(content.style.display !== 'block');
+        content.style.display = content.style.display !== 'block' ? 'block' : 'none';
       });
     });
 }
@@ -29,8 +30,6 @@ function handleScreenSizeChange(mediaQuery) {
 const mediaQuery = window.matchMedia('(max-width: 980px)');
 
 mediaQuery.addEventListener('change', (event) => {
-    alert(mediaQuery.matches);
-    console.log(mediaQuery.matches);
     if(mediaQuery.matches){
         handleScreenSizeChange(event.target);
     }
