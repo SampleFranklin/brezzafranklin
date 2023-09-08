@@ -31,6 +31,9 @@ li.accord {
 } */ 
 
 /* add media query */
-.col-list-content{
-  display: none;
+
+@media screen and (max-width: 980px) {
+  .col-list-content{
+    display: none;
+  }
 }
