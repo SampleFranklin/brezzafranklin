@@ -59,6 +59,7 @@
   line-height: 36px;
   letter-spacing: 0.52px;
   color: #fff;
+  font-family: 'Roboto Medium';
 }
 
 .stories .carousel-text:after {
@@ -79,12 +80,13 @@
   padding: 6px 20px 6px 17px;
   margin-bottom: 17px;
   line-height: 36px;
+  font-family: 'Roboto Medium';
 }
 
 .stories .carousel-text .button-container a {
   position: absolute;
   bottom: 25px;
-  right: 55px;
+  right: 18px;
   font: bold 14px/19px "Roboto Bold";
   letter-spacing: 0.56px;
   color: #fff;
@@ -97,27 +99,36 @@
 }
 
 @media screen and (max-width: 1023px) {
-
-  .carousel-wrapper,
   .feature.carousel-container {
+    padding: 31px 0;
+  }
+
+  .carousel-wrapper {
     padding: 0;
   }
 
   .carousel-container .default-content-wrapper p {
     font-size: 20px;
-    line-height: 24px;
     max-width: 75%;
   }
 
-  .carousel-container .carousel-text {
+  .stories .carousel-text {
+    margin-top: 0;
+    padding-top: 24px;
+    padding-left: 25px;
+  }
+
+  .carousel-container .carousel-text p {
     line-height: 24px;
     font-size: 16px;
+    letter-spacing: 0.32px;
   }
 
   .stories .carousel-text p:first-child {
     padding: 5px 16px 6px;
     font-size: 12px;
     line-height: 14px;
+    letter-spacing: 0.24px;
   }
 
   .stories .carousel-text .button-container a {

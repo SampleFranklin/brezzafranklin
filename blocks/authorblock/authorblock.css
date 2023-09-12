@@ -116,6 +116,10 @@
     line-height: 24px;
   }
 
+  .section.left-container p:last-child {
+    padding-bottom: 0;
+  }
+
   .authorblock-wrapper {
     padding-top: 20px;
   }
@@ -133,4 +137,10 @@
   .left-container.columns-container .default-content-wrapper {
     padding-top: 25px;
   }
+
+  .left-container.columns-container .columns-wrapper {
+    padding-top: 0;
+    padding-bottom: 6px;
+  }
+
 }
