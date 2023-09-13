@@ -37,11 +37,12 @@
   text-align: left
 }
 .col-reach-us p , .col-sales p , .col-corporate p, .col-more p, .col-social p  {
-  font-family: Roboto Regular;
-  margin-bottom: .5rem;
+  margin-bottom: 1.18rem;
   text-transform: capitalize
 }
-
+.contact-number p{
+  margin-bottom: 0;
+}
 .col-reach-us .reach-us {
   margin-bottom: 6.4375rem;
   max-width: 13.8125rem
@@ -53,16 +54,28 @@
   flex: 0 0 22%;
   max-width: 22%
 }
-.col-corporate,.col-sales,.col-more{
-  flex: 0 0 18.67%;
-  max-width: 18.67%;
+ .col-reach-us .col-list-content li{
+  text-transform: capitalize
+}
+.col-corporate{
+  flex: 0 0 13.67%;
+  max-width: 13.67%;
+  
+    padding-right: 0.625rem;
+    margin-left:1.25rem;
+}
+.col-sales{
+  flex: 0 0 18.08%;
+  max-width: 18.08%;
+    padding-right: 0.625rem;
+}
+.col-more{
+  flex: 0 0 19.02%;
+  max-width: 19.02%;
+    padding-right: 0.625rem;
 }
 .col-list-content {
   opacity: .6
-}
-
-.col-corporate{
-  padding-left: 2rem
 }
 
 .col-list-content li a {
@@ -92,7 +105,8 @@
   -webkit-box-flex: 0;
   -ms-flex: 0 0 19.78;
   flex: 0 0 19.78%;
-  max-width: 19%
+  max-width: 19%;
+  margin-right:2.438rem;
 }
 
 .contact-number p,.contact-email p{
@@ -107,17 +121,11 @@
   margin-bottom: 1.8125rem;
   margin-top: 1.3125rem
 }
-.col-corporate {
+ .col-corporate {
   max-width: 15%
 }
 .col-sales {
 max-width:22%
-}
-.col-more {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 19.78%;
-  flex: 0 0 19.78%;
-  max-width: 20%
 }
 
 .text p{
@@ -160,6 +168,53 @@ max-width:22%
   padding-top: .75rem;
   text-align: left
 }
+.footer-bar-wrapper{
+  background: #000000 0% 0% no-repeat padding-box;
+  opacity: 1;
+  height:4.938rem;
+}
+.footer-bar{
+  display: flex;
+  margin: 0 5.8%;
+  height:100%;
+  align-items:center;
+  column-gap:1.25rem;
+}
+.copyright-text,.copyright-list{
+color:#FFFFFF;
+}
+
+.copyright-text {
+  color: #fff;
+  font-family: Roboto Medium;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 3rem;
+  opacity: 1;
+  padding-right: 5rem;
+  text-align: left
+}
+
+
+.footerbar-list li {
+  color: #fff;
+  font-family: Roboto Medium;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 3rem;
+  opacity: 1;
+  text-align: left;
+  text-align: center;
+  text-transform: uppercase
+}
+
+.footerbar-list li a{
+  color: #fff;
+}
 
 @media screen and (max-width: 1300px) {
   .col-reach-us,.col-social{
@@ -175,6 +230,15 @@ max-width:22%
       -ms-flex: 0 0 16.67;
       flex: 0 0 16.67%;
       max-width: 16.67%
+  }
+  .footerbar-list li,.copyright-text p{
+    white-space: nowrap;
+  }
+  .copyright-text{
+    padding-right: 2rem;;
+  }
+  .col-more{
+    margin-right:0;
   }
 }
 
@@ -198,7 +262,9 @@ max-width:22%
       opacity: 1;
       text-align: left
   }
-
+  .col-corporate{
+    margin-left: 0;
+  }
   .col-reach-us p , .col-sales p , .col-corporate p, .col-more p, .col-social p ,.col-list-content li a {
       font-family: Roboto Regular;
       font-weight: 300;
@@ -399,54 +465,6 @@ max-width:22%
   }
 }
 
-.footer-bar-wrapper{
-  background: #000000 0% 0% no-repeat padding-box;
-  opacity: 1;
-  height:4.938rem;
-}
-.footer-bar{
-  display: flex;
-  margin: 0 5.8%;
-  height:100%;
-  align-items:center;
-  column-gap:1.25rem;
-}
-.copyright-text,.copyright-list{
-color:#FFFFFF;
-}
-
-.copyright-text {
-  color: #fff;
-  font-family: Roboto Medium;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 300;
-  letter-spacing: 0;
-  line-height: 3rem;
-  opacity: 1;
-  padding-right: 5rem;
-  text-align: left
-}
-
-
-.footerbar-list li {
-  color: #fff;
-  font-family: Roboto Medium;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 300;
-  letter-spacing: 0;
-  line-height: 3rem;
-  opacity: 1;
-  text-align: left;
-  text-align: center;
-  text-transform: uppercase
-}
-
-.footerbar-list li a{
-  color: #fff;
-}
-
 @media screen and (max-width: 1023px) {
   .footer-bar {
       display:block;
@@ -489,10 +507,20 @@ flex-direction: column;
       opacity: 1;
       text-align: center;
       padding-bottom: 0.625rem;
+     
+  }
+  .col-reach-us p{
+    font-family: Roboto Bold;
+  }
+  .col-reach-us .col-list-content{
+    opacity:1;
+  }
+  .col-social .text p{
+    font-family: Roboto Bold;
   }
   .contact-number p,.contact-email p{
         color: #fff;
-        font-family: Roboto Regular;
+        font-family: Roboto Bold;
         font-size: 1.125rem;
         font-style: normal;
         font-weight: 700;
@@ -503,6 +531,13 @@ flex-direction: column;
         text-align: left;
         text-align: center
     } 
+    .contact-email,.contact-number{
+      display: inline-flex;
+      margin-top:0;
+    }
+    .contact-number{
+      margin-right: rem(15);
+    }
  .col-reach-us .col-list-content li {
   color: #fff;
   font-size: 1rem;
@@ -522,4 +557,7 @@ flex-direction: column;
   padding-right: 0.9375rem
 
   } 
+  .footnote-list li{
+    margin-bottom: 1rem;
+  }
 }
