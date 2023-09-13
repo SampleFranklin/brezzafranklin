@@ -30,6 +30,14 @@ function executeAccordion(){
 }
 
 
+const tagList = document.getElementById("tags-list");
+if (tagList) {
+    tagList.addEventListener("click", function (e) {
+        if (e.target.nodeName === 'LI') {
+            e.target.classList.toggle("bg-blue");
+        }
+    });
+} 
 window.addEventListener('resize', (event) => {
     window.location.reload();
     executeAccordion();

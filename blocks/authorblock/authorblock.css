@@ -3,17 +3,15 @@
   font: normal normal normal 18px/26px "Roboto Regular";
   letter-spacing: 0px;
   color: #1d1d1d;
-  padding-bottom: 25px;
+  padding-bottom: 16px;
 }
 
-.left-container.columns-container .default-content-wrapper {
-  padding-top: 30px;
-}
-.left-container.columns-container .default-content-wrapper .columns-wrapper {
+.left-container.columns-container .columns-wrapper {
   padding-top: 22px;
   padding-bottom: 47px;
 }
-.authorblock-title {
+
+.authorblock-container .authorblock-title {
   text-align: left;
   font: normal normal bold 32px/42px "Roboto Black";
   letter-spacing: 0px;
@@ -22,6 +20,7 @@
   opacity: 1;
   margin-bottom: 9px;
 }
+
 .authorblock-subtitle {
   border-bottom: 1px solid #707070;
   padding-bottom: 24px;
@@ -43,12 +42,15 @@
   margin-top: 24px;
   margin-bottom: 24px;
 }
+
 .authorblock-wrapper .authorblock-authorname p {
   display: inline;
 }
+
 .authorblock-wrapper .authorblock-authorname::before {
   content: "By-";
 }
+
 .authorblock-date {
   text-align: left;
   font: normal normal normal 12px/18px "Roboto Regular";
@@ -60,6 +62,7 @@
   margin-top: 24px;
   margin-bottom: 24px;
 }
+
 .authorblock-tag {
   clear: both;
   border-radius: 15px;
@@ -67,6 +70,7 @@
   height: 30px;
   background: #292985 0% 0% no-repeat padding-box;
 }
+
 .authorblock-tag p {
   text-align: left;
   font-size: 12px;
@@ -76,13 +80,16 @@
   padding: 7px 16px;
   font-family: "Roboto Medium";
 }
+
 .authorblock-redirects {
   margin-top: 32px;
 }
+
 .authorblock-redirects ul img {
   width: 37px;
   height: 37px;
 }
+
 .authorblock-redirects ul.redirects-list li {
   display: inline-block;
   padding-right: 15px;
@@ -96,28 +103,44 @@
     line-height: 32px;
     margin-bottom: 20px;
   }
+
   .authorblock-subtitle {
     font-size: 16px;
     line-height: 21px;
     border-bottom: 0;
     padding-bottom: 0;
   }
+
   .section.left-container p {
     font-size: 14px;
     line-height: 24px;
   }
+
+  .section.left-container p:last-child {
+    padding-bottom: 0;
+  }
+
   .authorblock-wrapper {
     padding-top: 20px;
   }
+
   .authorblock-wrapper .authorblock-authorname,
   .authorblock-wrapper .authorblock-date {
     margin-top: 13px;
     margin-bottom: 20px;
   }
+
   .authorblock-redirects {
     margin-top: 20px;
   }
+
   .left-container.columns-container .default-content-wrapper {
     padding-top: 25px;
   }
+
+  .left-container.columns-container .columns-wrapper {
+    padding-top: 0;
+    padding-bottom: 6px;
+  }
+
 }

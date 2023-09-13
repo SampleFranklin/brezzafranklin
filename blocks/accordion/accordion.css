@@ -1,24 +1,24 @@
-.accordion-wrapper {
-  padding: 0 var(--body-padding);
+.accordion-wrapper .accordion {
+  cursor: pointer;
+  padding-top: 31px;
 }
 
-.accordion {
-  cursor: pointer;
-}
 .accordion-container {
   margin-bottom: 50px;
   margin-top: 57px;
 }
-.accordion-container .default-content-wrapper p {
-  font: normal normal normal 18px/26px "Roboto Regular";
-  color: #1d1d1d;
-}
+
 .accordion-container .default-content-wrapper p:first-child {
   font-family: "Roboto Medium";
   font-size: 26px;
-  font-weight: 48px;
+  line-height: 48px;
   color: #000;
   padding-bottom: 16px;
+}
+
+.accordion-container .default-content-wrapper p {
+  font: normal normal normal 18px/26px "Roboto Regular";
+  color: #1d1d1d;
 }
 
 .accordion .accordion-item {
@@ -37,7 +37,7 @@
 
 .accordion-item-header::after {
   transform: rotate(45deg);
-  border-color: #c5c5c5;
+  border-color: #000;
   border-style: solid;
   border-width: 0 2px 2px 0;
   content: " ";
@@ -56,7 +56,7 @@
 
 .accordion-item.expanded .accordion-item-header::after {
   transform: rotate(-135deg);
-  border-color: #006eff;
+  border-color: #000;
   border-style: solid;
   border-width: 0 2px 2px 0;
   top: 10px;
@@ -90,7 +90,7 @@
 
 .accordion-item-content p {
   word-break: break-word;
-  max-width: 1110px;
+  max-width: 95%;
 }
 
 .accordion-item.expanded .accordion-item-content {
@@ -115,6 +115,7 @@
 }
 
 @media (min-width: 1600px) {
+
   /* large desktop */
   .accordion-wrapper {
     max-width: var(--section-large-desktop-max-width);
@@ -151,14 +152,29 @@
 .accordion.faq .accordion-item-content p:last-of-type {
   margin-bottom: 0;
 }
+
 @media screen and (max-width: 1023px) {
+  .accordion-wrapper .accordion {
+    padding-top: 17px;
+  }
+
+  .accordion-container {
+    margin-top: 41px;
+  }
+
+  .accordion-container .default-content-wrapper p:first-child {
+    font-size: 20px;
+  }
+
   .accordion-container .default-content-wrapper p {
     font-size: 16px;
     line-height: 24px;
   }
+
   .accordion .accordion-item {
     padding: 20px 0;
   }
+
   .accordion-item .accordion-item-header {
     font-size: 16px;
     line-height: 19px;

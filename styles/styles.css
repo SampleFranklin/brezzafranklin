@@ -38,35 +38,41 @@
   /* nav height */
   --nav-height: 48px;
 }
+
 @font-face {
   font-family: "Roboto Bold";
   src: url("./fonts/Roboto-Bold.ttf");
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "Roboto Black";
   src: url("./fonts/Roboto-Black.ttf");
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "Roboto Medium";
   src: url("./fonts/Roboto-Medium.ttf");
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "Roboto Regular";
   src: url("./fonts/Roboto-Regular.ttf");
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: "Source Sans Pro";
   src: url("./fonts/SourceSansPro-Regular.otf");
   font-display: swap;
 }
+
 @media (min-width: 900px) {
   :root {
     --heading-font-size-xxl: 60px;
@@ -110,18 +116,23 @@ h6 {
 h1 {
   font-size: var(--heading-font-size-xxl);
 }
+
 h2 {
   font-size: var(--heading-font-size-xl);
 }
+
 h3 {
   font-size: var(--heading-font-size-l);
 }
+
 h4 {
   font-size: var(--heading-font-size-m);
 }
+
 h5 {
   font-size: var(--heading-font-size-s);
 }
+
 h6 {
   font-size: var(--heading-font-size-xs);
 }
@@ -171,6 +182,7 @@ a:hover,
 a {
   text-decoration: none;
 }
+
 ul {
   list-style-type: none;
 }
@@ -212,26 +224,37 @@ main img {
   width: 100%;
 }
 
+
+
 /* custom css changes for layout */
 main {
   margin: 0 12px;
 }
+
 @media screen and (min-width: 1023px) {
   main {
     margin: 0 5.8%;
   }
+
   .authorblock-container {
     overflow: hidden;
   }
+
   .authorblock-container .default-content-wrapper,
   .section.left-container {
-    width: 59%;
-    margin-right: 10%;
+    width: 57.5%;
+    margin-right: 10.4%;
     float: left;
+
   }
+
+  .section.left-container {
+    padding-top: 40px;
+  }
+
   .authorblock-wrapper,
   .section.right-container {
     float: left;
-    width: 30%;
+    width: 32.1%;
   }
 }
