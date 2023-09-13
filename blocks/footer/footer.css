@@ -24,6 +24,14 @@
   text-transform: uppercase
 }
 
+.col-list-heading{
+  pointer-events: none;
+}
+
+.col-list-content{
+  display: block;
+}
+
  .col-reach-us p, .col-corporate p, .col-sales p, .col-more p,
  .col-social p,
  .col-list-content  li {
@@ -224,6 +232,9 @@ color:#FFFFFF;
       max-width: 25%
   }
 
+  .col-list-heading{
+    pointer-events: all;
+  }
 
   .col-corporate,.col-sales,.col-more {
       -webkit-box-flex: 0;

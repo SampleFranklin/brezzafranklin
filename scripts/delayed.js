@@ -18,13 +18,19 @@ function executeAccordion(){
 // });
     const mediaQuery = window.matchMedia('(max-width: 1023px)');
     const accordionSections = document.querySelectorAll('.col-accordion');
-    accordionSections.forEach((section) => {
+    accordionSections.forEach((section,index) => {
     const heading = section.querySelector('.col-list-heading');
     const content = section.querySelector('.col-list-content');
-      if(mediaQuery.matches ){
-        heading.addEventListener('click', () => {
+      if(mediaQuery.matches && index !== 0){
+        content.style.display = 'none';
+        if(heading.getAttribute("init") !== "true"){
+          heading.addEventListener('click', () => {
             content.style.display = content.style.display !== 'block' ? 'block' : 'none';
-        });
+          });
+          heading.setAttribute("init","true");
+        }
+      }else{
+        content.style.display = 'block';
       }
     });
 }
@@ -39,7 +45,6 @@ if (tagList) {
     });
 } 
 window.addEventListener('resize', (event) => {
-    window.location.reload();
     executeAccordion();
 });
 executeAccordion();
