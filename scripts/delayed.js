@@ -49,3 +49,16 @@ window.addEventListener('resize', (event) => {
   executeAccordion();
 });
 executeAccordion();
+
+var checkboxes = document.querySelectorAll('input[type=checkbox][name=compare]');
+
+for (var checkbox of checkboxes) {
+  checkbox.addEventListener('change', function (event) {
+    if (event.target.checked) {
+      event.target.nextSibling.innerHTML = 'Added To Compare';
+    }
+    else {
+      event.target.nextSibling.innerHTML = 'Add To Compare';
+    }
+  });
+}

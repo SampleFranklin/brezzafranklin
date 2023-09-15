@@ -73,6 +73,12 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Roboto Light";
+  src: url("./fonts/Roboto-Light.ttf");
+  font-display: swap;
+}
+
 @media (min-width: 900px) {
   :root {
     --heading-font-size-xxl: 60px;
@@ -142,9 +148,11 @@ dl,
 ol,
 ul,
 pre,
-blockquote {
+blockquote,
+button {
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 hr {
@@ -258,3 +266,11 @@ main {
     width: 32.1%;
   }
 }
+
+/* .carousel-container,
+.tagsblock-container,
+.authorblock-container,
+.accordion-container,
+.columns-container {
+  display: none;
+} */

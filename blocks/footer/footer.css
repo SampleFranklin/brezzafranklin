@@ -448,19 +448,6 @@
     width: .5625rem
   }
 
-
-  .col-corporate p.col-accordion:after,
-  .col-sales p.col-accordion:after,
-  .col-more p.col-accordion:after {
-    background-color: #2c2c2c;
-    background-image: url(../../styles/icons/minus.webp);
-    background-size: 100%;
-    content: "";
-    float: right;
-    height: .125rem;
-    width: .5625rem
-  }
-
   .col-corporate .col-list-content,
   .col-sales .col-list-content,
   .col-more .col-list-content {

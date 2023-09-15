@@ -1,0 +1,166 @@
+.recommendedvariants-container .default-content-wrapper p {
+    font: 26px/48px 'Roboto Medium';
+}
+
+.recommendedvariants-wrapper {
+    margin-top: 34px;
+    overflow: hidden;
+}
+
+.recommendedvariants-wrapper .card-top {
+    position: relative;
+}
+
+.recommendedvariants-wrapper .variant-share-text {
+    position: absolute;
+    top: 15px;
+    left: 34px;
+    font: 14px/19px 'Roboto Medium';
+}
+
+.recommendedvariants-wrapper .variant-share-text::before {
+    background-image: url(../../styles/icons/share-icon.svg);
+    background-size: 100%;
+    content: "";
+    height: 12px;
+    width: 14px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+
+.recommendedvariants-wrapper .top-selling-container {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #000 0% 0% no-repeat padding-box;
+    opacity: 1;
+    -webkit-transform: skew(-30deg);
+}
+
+.recommendedvariants-wrapper .top-selling-text {
+    font: italic 12px/16px 'Roboto Bold';
+    color: #FFFFFF;
+    text-transform: uppercase;
+    -webkit-transform: skew(30deg);
+    padding: 2px 8px;
+}
+
+.recommendedvariants-wrapper .variant-desc {
+    margin-top: 64px;
+    padding-left: 27px;
+}
+
+.recommendedvariants-wrapper .swiper-slide {
+    border: 1px solid #707070;
+}
+
+.variant-price-section {
+    padding-top: 15px;
+    padding-bottom: 23px;
+}
+
+.variant-price {
+    font: 26px/34px 'Roboto Medium';
+    display: inline-block;
+}
+
+.variant-price-text {
+    font: 14px/19px 'Roboto Medium';
+    color: #8B8B8C;
+    padding-left: 8px;
+    display: inline-block;
+}
+
+.variant-feature {
+    font: 18px/24px 'Roboto Bold';
+    color: #304659;
+    padding-bottom: 16px;
+}
+
+.variant-feature-ul {
+    min-height: 170px;
+}
+
+.variant-feature-ul .variant-feature-list {
+    padding-bottom: 10px;
+}
+
+.variant-feature-ul .variant-feature-list:before {
+    background-image: url(../../styles/icons/check-icons.svg);
+    background-size: 100%;
+    content: "";
+    height: 11px;
+    width: 17px;
+    display: inline-block;
+    margin-right: 11px;
+}
+
+.variant-feature-ul .variant-feature-text {
+    font: 16px/24px 'Roboto Light';
+    color: #3B5266;
+    display: inline-block;
+}
+
+.variant-button-container button {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    background: none;
+}
+
+.variant-button-container .specification-btn {
+    font: 14px/19px 'Roboto Bold';
+    letter-spacing: 0.56px;
+    padding: 31px 0;
+    text-transform: uppercase;
+}
+
+.variant-button-container .specification-btn a {
+    color: #292985;
+    padding: 14px 40px;
+    border: 1px solid #292985;
+    display: inline-block;
+}
+
+.variant-button-container .test-drive-btn {
+    text-decoration: underline;
+}
+
+.variant-button-container .test-drive-btn {
+    font: 14px/32px 'Source Sans Pro';
+    color: #202020;
+}
+
+.variant-button-container {
+    padding-bottom: 31px;
+    padding-top: 68px;
+}
+
+.variant-button-container .compare-cta {
+    text-align: center;
+}
+
+.recommendedvariants-wrapper .variant-title {
+    font: 18px/24px 'Roboto Bold';
+}
+
+
+
+.recommendedvariants-wrapper .test-drive-btn a {
+    text-decoration: underline;
+    font: 14px/32px 'Source Sans Pro';
+    color: #202020;
+
+}
+
+@media screen and (max-width: 1023px) {
+    .recommendedvariants-container .default-content-wrapper p {
+        font: 20px/24px 'Roboto Medium';
+    }
+
+    .recommendedvariants-wrapper {
+        margin-top: 27px;
+    }
+
+}

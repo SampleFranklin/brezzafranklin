@@ -33,9 +33,6 @@
   margin-top: 18px;
 }
 
-.swiper-slide {
-  opacity: 0;
-}
 
 .swiper-slide-visible {
   opacity: 1;
