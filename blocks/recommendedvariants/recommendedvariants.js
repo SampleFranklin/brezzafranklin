@@ -146,8 +146,8 @@ export default async function decorate(block) {
     variantDetailsDiv.appendChild(variantCardDiv);
   });
 
-  block.appendChild(previousButton);
-  block.appendChild(nextButton);
+  block.parentElement.appendChild(previousButton);
+  block.parentElement.appendChild(nextButton);
   const parentDiv = block.querySelector(":scope > div");
   parentDiv.replaceWith(variantDetailsDiv);
 
