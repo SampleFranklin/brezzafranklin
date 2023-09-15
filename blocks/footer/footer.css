@@ -87,6 +87,10 @@
   text-transform: capitalize
 }
 
+.col-reach-us .col-list-content li:first-child {
+  padding-bottom: 15px;
+}
+
 .col-corporate {
   flex: 0 0 13.67%;
   max-width: 13.67%;
@@ -364,9 +368,8 @@
     width: 100%
   }
 
-  .col-reach-us .col-list-content li {
-    margin-bottom: .9375rem;
-    opacity: 1
+  .col-reach-us .col-list-content li:first-child {
+    padding-bottom: 0;
   }
 
   .col-social {
@@ -403,6 +406,12 @@
   .col-sales p,
   .col-more p {
     border-bottom: .0625rem solid #3b3f40
+  }
+
+  .col-corporate p.active,
+  .col-sales p.active,
+  .col-more p.active {
+    border-bottom: 0;
   }
 
   .col-corporate p,
