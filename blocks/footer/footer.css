@@ -96,7 +96,7 @@
   max-width: 13.67%;
 
   padding-right: 0.625rem;
-  margin-left: 1.25rem;
+  margin-left: 27px;
 }
 
 .col-sales {
@@ -570,7 +570,7 @@
 @media screen and (max-width: 1023px) {
   .footer-bar {
     display: block;
-    margin-top: -.3125rem;
+    margin: -.3125rem 0 0 0;
     /* max-width: 100%; */
     padding: 0 .9375rem 1.5rem;
     position: relative;
