@@ -91,14 +91,9 @@ export default async function decorate(block) {
           const variantFeatureText = document.createElement("p");
           variantFeatureText.classList.add("variant-feature-text");
   
-          for(let i=0;i<tagsJson.data.length;i++){
-            if (tagsJson.data[i].Key === feature) {
-                feature = tagsJson.data[i].Text;
-                break;
-            }
-          }
+          const index = tagsJson.data.find((item) => item.Key === feature);
   
-          variantFeatureText.innerText = feature;
+          variantFeatureText.innerText = index.Text;
           variantFeatureList.appendChild(variantFeatureText);
           variantFeatureUl.appendChild(variantFeatureList); // to be added.
         }
