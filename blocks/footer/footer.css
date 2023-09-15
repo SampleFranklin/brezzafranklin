@@ -265,6 +265,7 @@
 }
 
 @media screen and (max-width: 1300px) {
+
   .col-reach-us,
   .col-social {
     -webkit-box-flex: 0;
@@ -647,7 +648,7 @@
   }
 
   .contact-number {
-    margin-right: rem(15);
+    margin-right: 15px;
   }
 
   .col-reach-us .col-list-content li {
