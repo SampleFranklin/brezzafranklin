@@ -274,9 +274,7 @@
     max-width: 25%
   }
 
-  .col-list-heading {
-    pointer-events: all;
-  }
+
 
   .col-corporate,
   .col-sales,
@@ -303,6 +301,10 @@
 }
 
 @media screen and (max-width: 1023px) {
+  .col-list-heading {
+    pointer-events: all;
+  }
+
   .footer-content {
     background-color: #000;
     padding: 1.0625rem 0 0

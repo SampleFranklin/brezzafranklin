@@ -22,6 +22,7 @@ function executeAccordion() {
     const heading = section.querySelector('.col-list-heading');
     const content = section.querySelector('.col-list-content');
     if (mediaQuery.matches && index !== 0) {
+      heading.classList.remove('active');
       content.style.display = 'none';
       if (heading.getAttribute("init") !== "true") {
         heading.addEventListener('click', () => {

@@ -4,176 +4,20 @@ export default async function decorate(block) {
 
   console.log(block);
   console.log(queryURI);
-  //const response = await fetch(queryURI);
-  //const jsonData = await response.json();
-  const jsonData = {
-    data: {
-      carVariantsList: {
-        items: [
-          {
-            imageUrl: {
-              _path: "/content/dam/msil/images/desktop/variants/lxi1.jpg",
-
-              _authorUrl:
-                "http://localhost:4502/content/dam/msil/images/desktop/variants/lxi1.jpg",
-
-              _publishUrl:
-                "http://localhost:4503/content/dam/msil/images/desktop/variants/lxi1.jpg",
-            },
-
-            carName: "New Brezza K15C ISG 5MT LXI",
-
-            variant_name: "Lxi",
-
-            variant_id: "bz-lxi",
-
-            ex_price: "8,29,000",
-
-            ex_location: "Delhi",
-
-            _metadata: {
-              stringArrayMetadata: [
-                {
-                  value: [
-                    "msil:features/safety-first",
-
-                    "msil:features/lorem-ipsum-daller-sit",
-
-                    "msil:features/steel-wheels-with-wheel-cover",
-                  ],
-                },
-              ],
-            },
-          },
-          {
-            imageUrl: {
-              _path: "/content/dam/msil/images/desktop/variants/lxi1.jpg",
-
-              _authorUrl:
-                "http://localhost:4502/content/dam/msil/images/desktop/variants/lxi1.jpg",
-
-              _publishUrl:
-                "http://localhost:4503/content/dam/msil/images/desktop/variants/lxi1.jpg",
-            },
-
-            carName: "New Brezza K15C ISG 5MT LXI",
-
-            variant_name: "Lxi",
-
-            variant_id: "bz-lxi",
-
-            ex_price: "8,29,000",
-
-            ex_location: "Delhi",
-
-            _metadata: {
-              stringArrayMetadata: [
-                {
-                  value: [
-                    "msil:features/safety-first",
-
-                    "msil:features/lorem-ipsum-daller-sit",
-
-                    "msil:features/steel-wheels-with-wheel-cover",
-                  ],
-                },
-              ],
-            },
-          },
-
-          {
-            imageUrl: {
-              _path: "/content/dam/msil/images/desktop/variants/vxi1.jpg",
-
-              _authorUrl:
-                "http://localhost:4502/content/dam/msil/images/desktop/variants/vxi1.jpg",
-
-              _publishUrl:
-                "http://localhost:4503/content/dam/msil/images/desktop/variants/vxi1.jpg",
-            },
-
-            carName: "New Brezza K15C ISG 5MT VXI",
-
-            variant_name: "Vxi",
-
-            variant_id: "bz-vxi",
-
-            ex_price: "9,64,500",
-
-            ex_location: "Delhi",
-
-            _metadata: {
-              stringArrayMetadata: [
-                {
-                  value: [
-                    "msil:features/steel-wheels-with-wheel-cover",
-
-                    "msil:features/projector-headlamps",
-
-                    "msil:features/roof-end-spoiler",
-
-                    "msil:features/chrome-accentuated-front-grille",
-                  ],
-                },
-              ],
-            },
-          },
-
-          {
-            imageUrl: {
-              _path: "/content/dam/msil/images/desktop/variants/zxi1.jpg",
-
-              _authorUrl:
-                "http://localhost:4502/content/dam/msil/images/desktop/variants/zxi1.jpg",
-
-              _publishUrl:
-                "http://localhost:4503/content/dam/msil/images/desktop/variants/zxi1.jpg",
-            },
-
-            carName: "New Brezza K15C ISG 5MT ZXI",
-
-            variant_name: "Zxi",
-
-            variant_id: "bz-zxi",
-
-            ex_price: "11,04,500",
-
-            ex_location: "Delhi",
-
-            _metadata: {
-              stringArrayMetadata: [
-                {
-                  value: [
-                    "msil:features/steel-wheels-with-wheel-cover",
-
-                    "msil:features/projector-headlamps",
-
-                    "msil:features/roof-end-spoiler",
-
-                    "msil:features/chrome-accentuated-front-grille",
-
-                    "msil:features/wheel-arch-cladding",
-                  ],
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-  };
+  const response = await fetch(queryURI);
+  const jsonData = await response.json();
   const variantsList = jsonData.data.carVariantsList.items;
 
   const variantDetailsDiv = document.createElement("div");
   variantDetailsDiv.classList.add("variant-details", "swiper-wrapper");
-
+  const previousButton = document.createElement("div");
+  const nextButton = document.createElement("div");
+  previousButton.classList.add("swiper-button-prev");
+  nextButton.classList.add("swiper-button-next");
   variantsList.forEach((item) => {
     const variantCardDiv = document.createElement("div");
     variantCardDiv.classList.add("variant-card", "swiper-slide");
-    const previousButton = document.createElement("div");
-    const nextButton = document.createElement("div");
-    previousButton.classList.add("swiper-button-prev");
-    nextButton.classList.add("swiper-button-next");
+
     // Decorating card-top div
     const cardTopDiv = document.createElement("div");
     cardTopDiv.classList.add("card-top");
@@ -311,10 +155,10 @@ export default async function decorate(block) {
     variantCardDiv.appendChild(variantDescDiv);
     variantCardDiv.appendChild(variantButtonContainer);
     variantDetailsDiv.appendChild(variantCardDiv);
-    variantDetailsDiv.appendChild(previousButton);
-    variantDetailsDiv.appendChild(nextButton);
-  });
 
+  });
+  block.appendChild(previousButton);
+  block.appendChild(nextButton);
   // block.classList.add("swiper-wrapper");
   const parentDiv = block.querySelector(":scope > div");
   parentDiv.replaceWith(variantDetailsDiv);
