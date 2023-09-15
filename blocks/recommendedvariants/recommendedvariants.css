@@ -2,6 +2,38 @@
     font: 26px/48px 'Roboto Medium';
 }
 
+.recommendedvariants-container .default-content-wrapper:last-child {
+    margin-top: 55px;
+    margin-bottom: 22px;
+}
+
+.recommendedvariants-container .default-content-wrapper:last-child p {
+    font: normal normal 300 12px/48px 'Roboto Light';
+    display: inline-block;
+}
+
+.recommendedvariants-container .default-content-wrapper:last-child .button-container {
+    float: right;
+}
+
+.recommendedvariants-container .default-content-wrapper:last-child .button-container a {
+    font: normal normal 300 12px/48px 'Roboto Light';
+    font: 18px/24px 'Roboto Medium';
+    color: #234D9C;
+    padding: 11px 28px;
+    display: inline-block;
+    border: 1px solid #234D9C;
+}
+
+.recommendedvariants-container .default-content-wrapper:last-child .button-container a::before {
+    background: url(../../styles/icons/compare-icon.svg) 0% 0% no-repeat padding-box;
+    content: "";
+    height: 20px;
+    display: inline-block;
+    width: 25px;
+    padding-left: 10px;
+}
+
 .recommendedvariants-wrapper {
     margin-top: 34px;
     overflow: hidden;
