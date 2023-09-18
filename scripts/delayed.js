@@ -5,17 +5,6 @@ import { sampleRUM } from './lib-franklin.js';
 sampleRUM('cwv');
 
 function executeAccordion() {
-  //     content.style.display = 'block';
-  //     if(mediaQuery.matches){
-  //         content.style.display = 'none';      
-  //         heading.addEventListener('click', () => {
-  //             content.style.display = content.style.display !== 'block' ? 'block' : 'none';
-  //         });
-  //     }else{
-  //         console.log("Here")
-  //         heading.replaceWith(heading.cloneNode(true));
-  //     }
-  // });
   const mediaQuery = window.matchMedia('(max-width: 1023px)');
   const accordionSections = document.querySelectorAll('.col-accordion');
   accordionSections.forEach((section, index) => {
@@ -37,22 +26,12 @@ function executeAccordion() {
   });
 }
 
-
-const tagList = document.getElementById("tags-list");
-if (tagList) {
-  tagList.addEventListener("click", function (e) {
-    if (e.target.nodeName === 'LI') {
-      e.target.classList.toggle("bg-blue");
-    }
-  });
-}
 window.addEventListener('resize', (event) => {
   executeAccordion();
 });
 executeAccordion();
 
 var checkboxes = document.querySelectorAll('input[type=checkbox][name=compare]');
-
 for (var checkbox of checkboxes) {
   checkbox.addEventListener('change', function (event) {
     if (event.target.checked) {
@@ -60,6 +39,15 @@ for (var checkbox of checkboxes) {
     }
     else {
       event.target.nextSibling.innerHTML = 'Add To Compare';
+    }
+  });
+}
+
+const tagList = document.getElementById("tags-list");
+if (tagList) {
+  tagList.addEventListener("click", function (e) {
+    if (e.target.nodeName === 'LI') {
+      e.target.classList.toggle("bg-blue");
     }
   });
 }

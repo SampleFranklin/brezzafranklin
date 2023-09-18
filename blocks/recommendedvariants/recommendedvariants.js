@@ -5,8 +5,212 @@ export default async function decorate(block) {
   const tagsResponse = await fetch("https://footer--brezzafranklin--samplefranklin.hlx.page/placeholders.json");
   const tagsJson = await tagsResponse.json();
 
-  const response = await fetch(queryURI);
-  const jsonData = await response.json();
+  // const response = await fetch(queryURI);
+  // const jsonData = await response.json();
+
+  const jsonData = {
+
+    "data": {
+
+        "carVariantsList": {
+
+            "items": [
+
+                {
+
+                    "imageUrl": {
+
+                        "_path": "/content/dam/msil/images/desktop/variants/lxi1.jpg",
+
+                        "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/lxi1.jpg",
+
+                        "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/lxi1.jpg"
+
+                    },
+
+                    "carName": "Maruti Brezza Lxi CNG",
+
+                    "variant_name": "Lxi",
+
+                    "variant_id": "bz-lxi-cng",
+
+                    "ex_price": "1,00,00,000",
+
+                    "ex_location": "Punjab",
+
+                    "_metadata": {
+
+                        "stringArrayMetadata": [
+                          {
+
+                            "value": [
+
+                                "msil:features/safety-first",
+
+                                "msil:features/lorem-ipsum-daller-sit",
+
+                                "msil:features/steel-wheels-with-wheel-cover"
+
+                            ]
+
+                          }
+                        ]
+
+                    }
+
+                },
+
+                {
+
+                    "imageUrl": {
+
+                        "_path": "/content/dam/msil/images/desktop/variants/lxi1.jpg",
+
+                        "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/lxi1.jpg",
+
+                        "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/lxi1.jpg"
+
+                    },
+
+                    "carName": "New Brezza K15C ISG 5MT LXI",
+
+                    "variant_name": "Lxi",
+
+                    "variant_id": "bz-lxi",
+
+                    "ex_price": "8,29,000",
+
+                    "ex_location": "Delhi",
+
+                    "_metadata": {
+
+                        "stringArrayMetadata": [
+
+                            {
+
+                                "value": [
+
+                                    "msil:features/safety-first",
+
+                                    "msil:features/lorem-ipsum-daller-sit",
+
+                                    "msil:features/steel-wheels-with-wheel-cover"
+
+                                ]
+
+                            }
+
+                        ]
+
+                    }
+
+                },
+
+                {
+
+                    "imageUrl": {
+
+                        "_path": "/content/dam/msil/images/desktop/variants/vxi1.jpg",
+
+                        "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/vxi1.jpg",
+
+                        "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/vxi1.jpg"
+
+                    },
+
+                    "carName": "New Brezza K15C ISG 5MT VXI",
+
+                    "variant_name": "Vxi",
+
+                    "variant_id": "bz-vxi",
+
+                    "ex_price": "9,64,500",
+
+                    "ex_location": "Delhi",
+
+                    "_metadata": {
+
+                        "stringArrayMetadata": [
+
+                            {
+
+                                "value": [
+
+                                    "msil:features/steel-wheels-with-wheel-cover",
+
+                                    "msil:features/projector-headlamps",
+
+                                    "msil:features/roof-end-spoiler",
+
+                                    "msil:features/chrome-accentuated-front-grille"
+
+                                ]
+
+                            }
+
+                        ]
+
+                    }
+
+                },
+
+                {
+
+                    "imageUrl": {
+
+                        "_path": "/content/dam/msil/images/desktop/variants/zxi1.jpg",
+
+                        "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/zxi1.jpg",
+
+                        "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/zxi1.jpg"
+
+                    },
+
+                    "carName": "New Brezza K15C ISG 5MT ZXI",
+
+                    "variant_name": "Zxi",
+
+                    "variant_id": "bz-zxi",
+
+                    "ex_price": "11,04,500",
+
+                    "ex_location": "Delhi",
+
+                    "_metadata": {
+
+                        "stringArrayMetadata": [
+
+                            {
+
+                                "value": [
+
+                                    "msil:features/steel-wheels-with-wheel-cover",
+
+                                    "msil:features/projector-headlamps",
+
+                                    "msil:features/roof-end-spoiler",
+
+                                    "msil:features/chrome-accentuated-front-grille",
+
+                                    "msil:features/wheel-arch-cladding"
+
+                                ]
+
+                            }
+
+                        ]
+
+                    }
+
+                }
+
+            ]
+
+        }
+
+    }
+
+}
 
   const variantsList = jsonData.data.carVariantsList.items;
 
