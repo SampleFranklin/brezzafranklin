@@ -24,7 +24,7 @@ export default async function decorate(block) {
 
                         "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/lxi1.jpg",
 
-                        "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/lxi1.jpg"
+                        "_publishUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/lxi1.jpg"
 
                     },
 
@@ -68,7 +68,7 @@ export default async function decorate(block) {
 
                         "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/lxi1.jpg",
 
-                        "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/lxi1.jpg"
+                        "_publishUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/lxi1.jpg"
 
                     },
 
@@ -114,7 +114,7 @@ export default async function decorate(block) {
 
                         "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/vxi1.jpg",
 
-                        "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/vxi1.jpg"
+                        "_publishUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/vxi1.jpg"
 
                     },
 
@@ -162,7 +162,7 @@ export default async function decorate(block) {
 
                         "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/zxi1.jpg",
 
-                        "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/zxi1.jpg"
+                        "_publishUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/zxi1.jpg"
 
                     },
 
