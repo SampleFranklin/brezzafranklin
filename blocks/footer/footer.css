@@ -1,3 +1,7 @@
+.footer-wrapper {
+  clear: both;
+}
+
 .footer-content {
   background-color: #222;
   color: #fff;

@@ -32,6 +32,8 @@ window.addEventListener('resize', (event) => {
 executeAccordion();
 
 var checkboxes = document.querySelectorAll('input[type=checkbox][name=compare]');
+var compareButton = document.querySelector('[title="Compare Variants"]');
+compareButton.classList.add('isDisabled');
 for (var checkbox of checkboxes) {
   checkbox.addEventListener('change', function (event) {
     if (event.target.checked) {
@@ -39,6 +41,14 @@ for (var checkbox of checkboxes) {
     }
     else {
       event.target.nextSibling.innerHTML = 'Add To Compare';
+    }
+    if (document.querySelectorAll('input[type=checkbox][name=compare]:checked').length >= 2) {
+      compareButton.classList.remove('isDisabled');
+      document.querySelectorAll('input[type=checkbox][name=compare]:not(:checked)').forEach((item) => item.disabled = true)
+    }
+    else {
+      compareButton.classList.add('isDisabled');
+      checkboxes.forEach((item) => item.disabled = false)
     }
   });
 }
