@@ -6,6 +6,8 @@
   background-color: #222;
   color: #fff;
   padding: 3.5rem 5.25rem .625rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-content * {
@@ -70,7 +72,8 @@
   text-transform: capitalize
 }
 
-.contact-number p {
+.contact-number p,
+.contact-email p {
   margin-bottom: 0;
 }
 
@@ -100,7 +103,7 @@
   max-width: 13.67%;
 
   padding-right: 0.625rem;
-  margin-left: 27px;
+  margin-left: 20px;
 }
 
 .col-sales {
@@ -164,7 +167,7 @@
   display: flex;
   justify-content: flex-end;
   margin-bottom: 1.8125rem;
-  margin-top: 1.3125rem
+  margin-top: 23px;
 }
 
 .col-corporate {
@@ -195,8 +198,8 @@
 
 .social-ctas .list-content img {
   height: 2.625rem;
-  -o-object-fit: cover;
-  object-fit: cover;
+  -o-object-fit: contain;
+  object-fit: contain;
   -o-object-position: 30%;
   object-position: 30%;
   width: 7.8125rem
@@ -282,9 +285,9 @@
   .col-sales,
   .col-more {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 16.67;
-    flex: 0 0 16.67%;
-    max-width: 16.67%
+    -ms-flex: 0 0 16;
+    flex: 0 0 16%;
+    max-width: 16%
   }
 
   .footerbar-list li,
@@ -370,10 +373,6 @@
     padding-right: .9375rem;
     position: relative;
     width: 100%
-  }
-
-  .col-reach-us .col-list-content li:first-child {
-    padding-bottom: 0;
   }
 
   .col-social {
