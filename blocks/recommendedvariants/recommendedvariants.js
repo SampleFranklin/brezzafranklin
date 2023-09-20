@@ -24,7 +24,7 @@ export default async function decorate(block) {
 
                         "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/lxi1.jpg",
 
-                        "_publishUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/lxi1.jpg"
+                        "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/lxi1.jpg"
 
                     },
 
@@ -34,7 +34,7 @@ export default async function decorate(block) {
 
                     "variant_id": "bz-lxi-cng",
 
-                    "ex_price": "1,00,00,000",
+                    "ex_price": "10,00,000",
 
                     "ex_location": "Punjab",
 
@@ -68,7 +68,7 @@ export default async function decorate(block) {
 
                         "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/lxi1.jpg",
 
-                        "_publishUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/lxi1.jpg"
+                        "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/lxi1.jpg"
 
                     },
 
@@ -114,7 +114,7 @@ export default async function decorate(block) {
 
                         "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/vxi1.jpg",
 
-                        "_publishUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/vxi1.jpg"
+                        "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/vxi1.jpg"
 
                     },
 
@@ -162,7 +162,7 @@ export default async function decorate(block) {
 
                         "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/zxi1.jpg",
 
-                        "_publishUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/zxi1.jpg"
+                        "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/zxi1.jpg"
 
                     },
 
@@ -220,7 +220,7 @@ export default async function decorate(block) {
   const nextButton = document.createElement("div");
   previousButton.classList.add("swiper-button-prev");
   nextButton.classList.add("swiper-button-next");
-  variantsList.forEach((item) => {
+  variantsList.forEach((item,index) => {
     const variantCardDiv = document.createElement("div");
     variantCardDiv.classList.add("variant-card", "swiper-slide");
 
@@ -241,10 +241,13 @@ export default async function decorate(block) {
     variantShareText.innerText = "Share";
 
     const topSellingContainer = document.createElement("div");
-    topSellingContainer.classList.add("top-selling-container");
     const topSellingText = document.createElement("p");
-    topSellingText.classList.add("top-selling-text");
-    topSellingText.innerText = "Top Selling";
+
+    if(index === 0){      
+      topSellingContainer.classList.add("top-selling-container");
+      topSellingText.classList.add("top-selling-text");
+      topSellingText.innerText = "Top Selling";
+    }
 
     topSellingContainer.appendChild(topSellingText);
     variantShareSection.appendChild(variantShareText);
