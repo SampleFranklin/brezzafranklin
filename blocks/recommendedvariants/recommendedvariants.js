@@ -230,7 +230,8 @@ export default async function decorate(block) {
 
     const cardImgTag = document.createElement("img");
     cardImgTag.classList.add("variant-img");
-    cardImgTag.src = item.imageUrl._publishUrl;
+    // cardImgTag.src = item.imageUrl._publishUrl;
+    cardImgTag.src = item.imageUrl._authorUrl;
     cardImgTag.alt = item.variant_name;
 
     const variantShareSection = document.createElement("div");
