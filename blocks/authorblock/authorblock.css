@@ -134,13 +134,13 @@
     margin-top: 20px;
   }
 
-  .left-container.columns-container .default-content-wrapper {
+  .left-container.columns-container .default-content-wrapper:first-child {
     padding-top: 25px;
   }
 
   .left-container.columns-container .columns-wrapper {
     padding-top: 0;
-    padding-bottom: 6px;
+    padding-bottom: 31px;
   }
 
 }
