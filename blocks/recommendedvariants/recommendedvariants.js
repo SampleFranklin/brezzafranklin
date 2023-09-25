@@ -34,7 +34,7 @@ export default async function decorate(block) {
 
 //                     "variant_id": "bz-lxi-cng",
 
-//                     "ex_price": "10,00,000",
+//                     "ex_price": "10,00,0000",
 
 //                     "ex_location": "Punjab",
 
@@ -49,7 +49,15 @@ export default async function decorate(block) {
 
 //                                 "msil:features/lorem-ipsum-daller-sit",
 
-//                                 "msil:features/steel-wheels-with-wheel-cover"
+//                                 "msil:features/steel-wheels-with-wheel-cover",
+
+//                                 "msil:features/steel-wheels-with-wheel-cover",
+
+//                                 "msil:features/steel-wheels-with-wheel-cover",
+
+//                                 "msil:features/steel-wheels-with-wheel-cover",
+
+                                
 
 //                             ]
 
@@ -293,6 +301,7 @@ export default async function decorate(block) {
 
     const featuresList = item._metadata.stringArrayMetadata[0];
     if (featuresList) {
+      var count = 0;
       for (var feature of featuresList.value) {
         const variantFeatureList = document.createElement("li");
         variantFeatureList.classList.add("variant-feature-list");
@@ -304,7 +313,11 @@ export default async function decorate(block) {
 
         variantFeatureText.innerText = index.Text;
         variantFeatureList.appendChild(variantFeatureText);
-        variantFeatureUl.appendChild(variantFeatureList); // to be added.
+
+        if(count < 5){
+          variantFeatureUl.appendChild(variantFeatureList); // to be added.
+          count++;
+        }
       }
     }
 
