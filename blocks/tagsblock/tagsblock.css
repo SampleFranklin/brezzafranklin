@@ -58,7 +58,8 @@
 
 .suggestedfeatures-list li a {
   padding: 30px 0 29px 32px;
-  display: block;
+  display: flex;
+  justify-content: space-between;
 }
 
 .suggestedfeatures-list li a::after {
@@ -66,18 +67,16 @@
   transform: rotate(-90deg);
   margin-right: 24px;
   float: right;
+  margin-left: 5px;
+  ;
 }
 
-.section.right-container.tagsblock-container .button-container {
 
-  background: #292985;
-  display: inline-block;
-
-}
 
 .section.right-container.tagsblock-container .button-container a {
   display: inline-block;
   padding: 14px 40px;
+  background: #292985;
 }
 
 .section.right-container.tagsblock-container .button-container a {
@@ -113,6 +112,10 @@
   .section.right-container.tagsblock-container {
     padding-top: 40px;
     padding-bottom: 37px;
+  }
+
+  .section.right-container.tagsblock-container .button-container {
+    text-align: center;
   }
 
   .section.right-container.tagsblock-container .default-content-wrapper:nth-child(1) p:nth-child(1) {

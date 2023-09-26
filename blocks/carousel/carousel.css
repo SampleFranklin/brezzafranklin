@@ -13,7 +13,7 @@
 }
 
 .feature.carousel-container {
-  padding: 69px 30px 72px 45px;
+  padding: 30px 30px 72px 45px;
   clear: both;
   background: #F9F9F9 0% 0% no-repeat padding-box;
 }
@@ -22,7 +22,6 @@
   padding-bottom: 30px;
   font-family: "Roboto Medium";
   font-size: 26px;
-  line-height: 48px;
 }
 
 .carousel-container .carousel-text {
@@ -57,6 +56,7 @@
   letter-spacing: 0.52px;
   color: #fff;
   font-family: 'Roboto Medium';
+  max-width: 80%;
 }
 
 .stories .carousel-text:after {
@@ -72,12 +72,10 @@
   background: no-repeat padding-box #fff;
   display: inline-block;
   color: #000;
-  font-size: 16px;
   letter-spacing: 0.32px;
   padding: 6px 20px 6px 17px;
   margin-bottom: 17px;
-  line-height: 36px;
-  font-family: 'Roboto Medium';
+  font: 16px/21px 'Roboto Medium';
 }
 
 .stories .carousel-text .button-container a {
@@ -91,8 +89,17 @@
 }
 
 .stories .carousel-text .button-container a::after {
-  content: "\2192";
-  padding-left: 15px;
+  content: "";
+  background: url(/styles/icons/right-icon.svg) no-repeat;
+  height: 20px;
+  margin-left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+}
+
+.carousel-container .stories .carousel-text {
+  margin-top: 0;
 }
 
 @media screen and (max-width: 1023px) {
@@ -132,4 +139,29 @@
     font-size: 12px;
     line-height: 16px;
   }
+
+  .carousel-container .swiper-button-prev {
+    background: url(../../styles/icons/arrow-left-mobile.svg) no-repeat 0 0;
+    left: auto;
+    right: 20px;
+    padding-right: 15px;
+    width: 20px;
+  }
+
+  .carousel-container .swiper-button-next {
+    transform: rotate(180deg);
+    background: url(../../styles/icons/arrow-left-mobile.svg) no-repeat 0 0;
+    width: 20px;
+  }
+
+  .carousel-container .swiper-button-next,
+  .carousel-container .swiper-button-prev {
+    top: -75px;
+  }
+
+  .stories.carousel-container .swiper-button-next,
+  .stories.carousel-container .swiper-button-prev {
+    top: -50px;
+  }
+
 }
