@@ -194,12 +194,11 @@
     font: 18px/24px 'Roboto Bold';
 }
 
-.recommendedvariants-wrapper .variant-title label {
+.recommendedvariants-wrapper .compare-cta label {
     padding-left: 15px;
     font: 14px/32px;
     color: #202020;
 }
-
 
 
 .recommendedvariants-wrapper .test-drive-btn a {
@@ -209,20 +208,24 @@
 
 }
 
+.recommendedvariants-container .swiper-slide {
+    box-sizing: border-box;
+}
+
 .recommendedvariants-container .swiper-button-next {
-    background-image: url(/styles/icons/circular-right-arrow.svg);
+    background: url(/styles/icons/circular-right-arrow.svg);
     height: 80px;
     width: 80px;
-    left: -84px;
+    right: -84px;
     z-index: 0;
     top: 50%;
 }
 
 .recommendedvariants-container .swiper-button-prev {
-    background-image: url(/styles/icons/circular-left-arrow.svg);
+    background: url(/styles/icons/circular-left-arrow.svg);
     height: 80px;
     width: 80px;
-    right: -84px;
+    left: -84px;
     z-index: 0;
     top: 50%;
 }
@@ -269,7 +272,7 @@
         font: 12px/30px;
     }
 
-    .recommendedvariants-wrapper .variant-title label {
+    .recommendedvariants-wrapper .compare-cta label {
         font: 13px/30px;
     }
 
@@ -279,6 +282,7 @@
         right: 20px;
         padding-right: 15px;
         width: 20px;
+        height: 20px;
     }
 
 
@@ -286,6 +290,7 @@
         transform: rotate(180deg);
         background-image: url(/styles/icons/arrow-left-mobile.svg);
         width: 20px;
+        height: 20px;
     }
 
 }
