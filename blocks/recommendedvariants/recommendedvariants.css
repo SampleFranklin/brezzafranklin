@@ -210,12 +210,20 @@
 }
 
 .recommendedvariants-container .swiper-button-next {
-    background: url(/styles/icons/circular-left-arrow.svg) no-repeat;
+    background-image: url(/styles/icons/circular-right-arrow.svg);
+    height: 80px;
+    width: 80px;
+    left: -84px;
+    z-index: 0;
     top: 50%;
 }
 
-.recommendedvariants-container .swiper-button-next {
-    background: url(/styles/icons/circular-right-arrow.svg) no-repeat;
+.recommendedvariants-container .swiper-button-prev {
+    background-image: url(/styles/icons/circular-left-arrow.svg);
+    height: 80px;
+    width: 80px;
+    right: -84px;
+    z-index: 0;
     top: 50%;
 }
 
