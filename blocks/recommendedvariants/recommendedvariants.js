@@ -5,221 +5,212 @@ export default async function decorate(block) {
   const tagsResponse = await fetch("https://footer--brezzafranklin--samplefranklin.hlx.page/placeholders.json");
   const tagsJson = await tagsResponse.json();
 
-  const response = await fetch(queryURI);
-  const jsonData = await response.json();
+  //const response = await fetch(queryURI);
+  // const jsonData = await response.json();
 
-//   const jsonData = {
+  const jsonData = {
 
-//     "data": {
+    "data": {
 
-//         "carVariantsList": {
+      "carVariantsList": {
 
-//             "items": [
+        "items": [
 
-//                 {
+          {
 
-//                     "imageUrl": {
+            "imageUrl": {
 
-//                         "_path": "/content/dam/msil/images/desktop/variants/lxi1.jpg",
+              "_path": "/content/dam/msil/images/desktop/variants/lxi1.jpg",
 
-//                         "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/lxi1.jpg",
+              "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/lxi1.jpg",
 
-//                         "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/lxi1.jpg"
+              "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/lxi1.jpg"
 
-//                     },
+            },
 
-//                     "carName": "Maruti Brezza Lxi CNG",
+            "carName": "Maruti Brezza Lxi CNG",
 
-//                     "variant_name": "Lxi",
+            "variant_name": "Lxi",
 
-//                     "variant_id": "bz-lxi-cng",
+            "variant_id": "bz-lxi-cng",
 
-//                     "ex_price": "10,00,0000",
+            "ex_price": "1,00,00,000",
 
-//                     "ex_location": "Punjab",
+            "ex_location": "Punjab",
 
-//                     "_metadata": {
+            "_metadata": {
 
-//                         "stringArrayMetadata": [
-//                           {
+              "stringArrayMetadata": [
+                {
 
-//                             "value": [
+                  "value": [
 
-//                                 "msil:features/safety-first",
+                    "msil:features/safety-first",
 
-//                                 "msil:features/lorem-ipsum-daller-sit",
+                    "msil:features/lorem-ipsum-daller-sit",
 
-//                                 "msil:features/steel-wheels-with-wheel-cover",
+                    "msil:features/steel-wheels-with-wheel-cover"
 
-//                                 "msil:features/steel-wheels-with-wheel-cover",
+                  ]
 
-//                                 "msil:features/steel-wheels-with-wheel-cover",
+                }
+              ]
 
-//                                 "msil:features/steel-wheels-with-wheel-cover",
+            }
 
-                                
+          },
 
-//                             ]
+          {
 
-//                           }
-//                         ]
+            "imageUrl": {
 
-//                     }
+              "_path": "/content/dam/msil/images/desktop/variants/lxi1.jpg",
 
-//                 },
+              "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/lxi1.jpg",
 
-//                 {
+              "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/lxi1.jpg"
 
-//                     "imageUrl": {
+            },
 
-//                         "_path": "/content/dam/msil/images/desktop/variants/lxi1.jpg",
+            "carName": "New Brezza K15C ISG 5MT LXI",
 
-//                         "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/lxi1.jpg",
+            "variant_name": "Lxi",
 
-//                         "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/lxi1.jpg"
+            "variant_id": "bz-lxi",
 
-//                     },
+            "ex_price": "8,29,000",
 
-//                     "carName": "New Brezza K15C ISG 5MT LXI",
+            "ex_location": "Delhi",
 
-//                     "variant_name": "Lxi",
+            "_metadata": {
 
-//                     "variant_id": "bz-lxi",
+              "stringArrayMetadata": [
 
-//                     "ex_price": "8,29,000",
+                {
 
-//                     "ex_location": "Delhi",
+                  "value": [
 
-//                     "_metadata": {
+                    "msil:features/safety-first",
 
-//                         "stringArrayMetadata": [
+                    "msil:features/lorem-ipsum-daller-sit",
 
-//                             {
+                    "msil:features/steel-wheels-with-wheel-cover"
 
-//                                 "value": [
+                  ]
 
-//                                     "msil:features/safety-first",
+                }
 
-//                                     "msil:features/lorem-ipsum-daller-sit",
+              ]
 
-//                                     "msil:features/steel-wheels-with-wheel-cover"
+            }
 
-//                                 ]
+          },
 
-//                             }
+          {
 
-//                         ]
+            "imageUrl": {
 
-//                     }
+              "_path": "/content/dam/msil/images/desktop/variants/vxi1.jpg",
 
-//                 },
+              "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/vxi1.jpg",
 
-//                 {
+              "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/vxi1.jpg"
 
-//                     "imageUrl": {
+            },
 
-//                         "_path": "/content/dam/msil/images/desktop/variants/vxi1.jpg",
+            "carName": "New Brezza K15C ISG 5MT VXI",
 
-//                         "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/vxi1.jpg",
+            "variant_name": "Vxi",
 
-//                         "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/vxi1.jpg"
+            "variant_id": "bz-vxi",
 
-//                     },
+            "ex_price": "9,64,500",
 
-//                     "carName": "New Brezza K15C ISG 5MT VXI",
+            "ex_location": "Delhi",
 
-//                     "variant_name": "Vxi",
+            "_metadata": {
 
-//                     "variant_id": "bz-vxi",
+              "stringArrayMetadata": [
 
-//                     "ex_price": "9,64,500",
+                {
 
-//                     "ex_location": "Delhi",
+                  "value": [
 
-//                     "_metadata": {
+                    "msil:features/steel-wheels-with-wheel-cover",
 
-//                         "stringArrayMetadata": [
+                    "msil:features/projector-headlamps",
 
-//                             {
+                    "msil:features/roof-end-spoiler",
 
-//                                 "value": [
+                    "msil:features/chrome-accentuated-front-grille"
 
-//                                     "msil:features/steel-wheels-with-wheel-cover",
+                  ]
 
-//                                     "msil:features/projector-headlamps",
+                }
 
-//                                     "msil:features/roof-end-spoiler",
+              ]
 
-//                                     "msil:features/chrome-accentuated-front-grille"
+            }
 
-//                                 ]
+          },
 
-//                             }
+          {
 
-//                         ]
+            "imageUrl": {
 
-//                     }
+              "_path": "/content/dam/msil/images/desktop/variants/zxi1.jpg",
 
-//                 },
+              "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/zxi1.jpg",
 
-//                 {
+              "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/zxi1.jpg"
 
-//                     "imageUrl": {
+            },
 
-//                         "_path": "/content/dam/msil/images/desktop/variants/zxi1.jpg",
+            "carName": "New Brezza K15C ISG 5MT ZXI",
 
-//                         "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/zxi1.jpg",
+            "variant_name": "Zxi",
 
-//                         "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/zxi1.jpg"
+            "variant_id": "bz-zxi",
 
-//                     },
+            "ex_price": "11,04,500",
 
-//                     "carName": "New Brezza K15C ISG 5MT ZXI",
+            "ex_location": "Delhi",
 
-//                     "variant_name": "Zxi",
+            "_metadata": {
 
-//                     "variant_id": "bz-zxi",
+              "stringArrayMetadata": [
 
-//                     "ex_price": "11,04,500",
+                {
 
-//                     "ex_location": "Delhi",
+                  "value": [
 
-//                     "_metadata": {
+                    "msil:features/steel-wheels-with-wheel-cover",
 
-//                         "stringArrayMetadata": [
+                    "msil:features/projector-headlamps",
 
-//                             {
+                    "msil:features/roof-end-spoiler",
 
-//                                 "value": [
+                    "msil:features/chrome-accentuated-front-grille",
 
-//                                     "msil:features/steel-wheels-with-wheel-cover",
+                    "msil:features/wheel-arch-cladding"
 
-//                                     "msil:features/projector-headlamps",
+                  ]
 
-//                                     "msil:features/roof-end-spoiler",
+                }
 
-//                                     "msil:features/chrome-accentuated-front-grille",
+              ]
 
-//                                     "msil:features/wheel-arch-cladding"
+            }
 
-//                                 ]
+          }
 
-//                             }
+        ]
 
-//                         ]
+      }
 
-//                     }
+    }
 
-//                 }
-
-//             ]
-
-//         }
-
-//     }
-
-// }
-
+  }
   const variantsList = jsonData.data.carVariantsList.items;
 
   const variantDetailsDiv = document.createElement("div");
@@ -228,7 +219,7 @@ export default async function decorate(block) {
   const nextButton = document.createElement("div");
   previousButton.classList.add("swiper-button-prev");
   nextButton.classList.add("swiper-button-next");
-  variantsList.forEach((item,index) => {
+  variantsList.forEach((item, index) => {
     const variantCardDiv = document.createElement("div");
     variantCardDiv.classList.add("variant-card", "swiper-slide");
 
@@ -252,7 +243,7 @@ export default async function decorate(block) {
     const topSellingContainer = document.createElement("div");
     const topSellingText = document.createElement("p");
 
-    if(index === 0){      
+    if (index === 0) {
       topSellingContainer.classList.add("top-selling-container");
       topSellingText.classList.add("top-selling-text");
       topSellingText.innerText = "Top Selling";
@@ -314,7 +305,7 @@ export default async function decorate(block) {
         variantFeatureText.innerText = index.Text;
         variantFeatureList.appendChild(variantFeatureText);
 
-        if(count < 5){
+        if (count < 5) {
           variantFeatureUl.appendChild(variantFeatureList); // to be added.
           count++;
         }

@@ -37,7 +37,7 @@
 
 .recommendedvariants-container .default-content-wrapper:last-child .button-container .isDisabled {
     color: currentColor;
-    cursor: not-allowed;
+    pointer-events: none;
     opacity: .5;
     text-decoration: none;
 }
@@ -45,10 +45,11 @@
 .recommendedvariants-container .default-content-wrapper:last-child .button-container a::before {
     background: url(../../styles/icons/compare-icon.svg) 0% 0% no-repeat padding-box;
     content: "";
-    height: 20px;
+    height: 22px;
     display: inline-block;
-    width: 25px;
+    width: 18px;
     padding-left: 10px;
+    vertical-align: middle;
 }
 
 .recommendedvariants-wrapper {
@@ -161,13 +162,13 @@
 .variant-button-container .specification-btn {
     font: 14px/19px 'Roboto Bold';
     letter-spacing: 0.56px;
-    padding: 31px 0;
+    padding: 17px 0;
     text-transform: uppercase;
 }
 
 .variant-button-container .specification-btn a {
     color: #292985;
-    padding: 14px 40px;
+    padding: 14px 10%;
     border: 1px solid #292985;
     display: inline-block;
 }
@@ -193,6 +194,12 @@
     font: 18px/24px 'Roboto Bold';
 }
 
+.recommendedvariants-wrapper .variant-title label {
+    padding-left: 15px;
+    font: 14px/32px;
+    color: #202020;
+}
+
 
 
 .recommendedvariants-wrapper .test-drive-btn a {
@@ -201,6 +208,17 @@
     color: #202020;
 
 }
+
+.recommendedvariants-container .swiper-button-next {
+    background: url(/styles/icons/circular-left-arrow.svg) no-repeat;
+    top: 50%;
+}
+
+.recommendedvariants-container .swiper-button-next {
+    background: url(/styles/icons/circular-right-arrow.svg) no-repeat;
+    top: 50%;
+}
+
 
 @media screen and (max-width: 1023px) {
     .recommendedvariants-container .default-content-wrapper p {
@@ -237,5 +255,13 @@
 
     .variant-feature-ul {
         min-height: initial;
+    }
+
+    .recommendedvariants-wrapper .test-drive-btn a {
+        font: 12px/30px;
+    }
+
+    .recommendedvariants-wrapper .variant-title label {
+        font: 13px/30px;
     }
 }

@@ -140,7 +140,8 @@
     line-height: 16px;
   }
 
-  .carousel-container .swiper-button-prev {
+  .carousel-container .swiper-button-prev,
+  .recommendedvariants-container .swiper-button-next {
     background: url(../../styles/icons/arrow-left-mobile.svg) no-repeat 0 0;
     left: auto;
     right: 20px;
@@ -148,7 +149,8 @@
     width: 20px;
   }
 
-  .carousel-container .swiper-button-next {
+  .carousel-container .swiper-button-next,
+  .recommendedvariants-container .swiper-button-next {
     transform: rotate(180deg);
     background: url(../../styles/icons/arrow-left-mobile.svg) no-repeat 0 0;
     width: 20px;

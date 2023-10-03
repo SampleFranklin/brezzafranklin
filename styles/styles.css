@@ -149,7 +149,8 @@ ol,
 ul,
 pre,
 blockquote,
-button {
+button,
+input {
   margin: 0;
   padding: 0;
   border: 0;
