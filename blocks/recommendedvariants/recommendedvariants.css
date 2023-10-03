@@ -274,7 +274,7 @@
     }
 
     .recommendedvariants-container .swiper-button-prev {
-        background-image: url(styles/icons/arrow-left-mobile.svg);
+        background-image: url(/styles/icons/arrow-left-mobile.svg);
         left: auto;
         right: 20px;
         padding-right: 15px;
@@ -284,7 +284,7 @@
 
     .recommendedvariants-container .swiper-button-next {
         transform: rotate(180deg);
-        background-image: url(styles/icons/arrow-left-mobile.svg);
+        background-image: url(/styles/icons/arrow-left-mobile.svg);
         width: 20px;
     }
 
