@@ -272,4 +272,20 @@
     .recommendedvariants-wrapper .variant-title label {
         font: 13px/30px;
     }
+
+    .recommendedvariants-container .swiper-button-prev {
+        background-image: url(styles/icons/arrow-left-mobile.svg);
+        left: auto;
+        right: 20px;
+        padding-right: 15px;
+        width: 20px;
+    }
+
+
+    .recommendedvariants-container .swiper-button-next {
+        transform: rotate(180deg);
+        background-image: url(styles/icons/arrow-left-mobile.svg);
+        width: 20px;
+    }
+
 }
