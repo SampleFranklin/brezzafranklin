@@ -104,7 +104,8 @@
 
 @media screen and (max-width: 1023px) {
   .feature.carousel-container {
-    padding: 31px 0;
+    padding: 31px 17px;
+    margin: 0 -17px;
   }
 
   .carousel-wrapper {
