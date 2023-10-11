@@ -16,10 +16,6 @@
     display: none;
 }
 
-.s7iconeffect[state="play"]{
-    background-color: aqua;
-}
-
 @media screen and (max-width: 1023px) {
     .smartcrop-wrapper {
         padding: 19px 0;
