@@ -8,217 +8,6 @@ export default async function decorate(block) {
   const response = await fetch(queryURI);
   const jsonData = await response.json();
 
-//   const jsonData = {
-
-//     "data": {
-
-//         "carVariantsList": {
-
-//             "items": [
-
-//                 {
-
-//                     "imageUrl": {
-
-//                         "_path": "/content/dam/msil/images/desktop/variants/lxi1.jpg",
-
-//                         "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/lxi1.jpg",
-
-//                         "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/lxi1.jpg"
-
-//                     },
-
-//                     "carName": "Maruti Brezza Lxi CNG",
-
-//                     "variant_name": "Lxi",
-
-//                     "variant_id": "bz-lxi-cng",
-
-//                     "ex_price": "10,00,0000",
-
-//                     "ex_location": "Punjab",
-
-//                     "_metadata": {
-
-//                         "stringArrayMetadata": [
-//                           {
-
-//                             "value": [
-
-//                                 "msil:features/safety-first",
-
-//                                 "msil:features/lorem-ipsum-daller-sit",
-
-//                                 "msil:features/steel-wheels-with-wheel-cover",
-
-//                                 "msil:features/steel-wheels-with-wheel-cover",
-
-//                                 "msil:features/steel-wheels-with-wheel-cover",
-
-//                                 "msil:features/steel-wheels-with-wheel-cover",
-
-                                
-
-//                             ]
-
-//                           }
-//                         ]
-
-//                     }
-
-//                 },
-
-//                 {
-
-//                     "imageUrl": {
-
-//                         "_path": "/content/dam/msil/images/desktop/variants/lxi1.jpg",
-
-//                         "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/lxi1.jpg",
-
-//                         "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/lxi1.jpg"
-
-//                     },
-
-//                     "carName": "New Brezza K15C ISG 5MT LXI",
-
-//                     "variant_name": "Lxi",
-
-//                     "variant_id": "bz-lxi",
-
-//                     "ex_price": "8,29,000",
-
-//                     "ex_location": "Delhi",
-
-//                     "_metadata": {
-
-//                         "stringArrayMetadata": [
-
-//                             {
-
-//                                 "value": [
-
-//                                     "msil:features/safety-first",
-
-//                                     "msil:features/lorem-ipsum-daller-sit",
-
-//                                     "msil:features/steel-wheels-with-wheel-cover"
-
-//                                 ]
-
-//                             }
-
-//                         ]
-
-//                     }
-
-//                 },
-
-//                 {
-
-//                     "imageUrl": {
-
-//                         "_path": "/content/dam/msil/images/desktop/variants/vxi1.jpg",
-
-//                         "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/vxi1.jpg",
-
-//                         "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/vxi1.jpg"
-
-//                     },
-
-//                     "carName": "New Brezza K15C ISG 5MT VXI",
-
-//                     "variant_name": "Vxi",
-
-//                     "variant_id": "bz-vxi",
-
-//                     "ex_price": "9,64,500",
-
-//                     "ex_location": "Delhi",
-
-//                     "_metadata": {
-
-//                         "stringArrayMetadata": [
-
-//                             {
-
-//                                 "value": [
-
-//                                     "msil:features/steel-wheels-with-wheel-cover",
-
-//                                     "msil:features/projector-headlamps",
-
-//                                     "msil:features/roof-end-spoiler",
-
-//                                     "msil:features/chrome-accentuated-front-grille"
-
-//                                 ]
-
-//                             }
-
-//                         ]
-
-//                     }
-
-//                 },
-
-//                 {
-
-//                     "imageUrl": {
-
-//                         "_path": "/content/dam/msil/images/desktop/variants/zxi1.jpg",
-
-//                         "_authorUrl": "http://localhost:4502/content/dam/msil/images/desktop/variants/zxi1.jpg",
-
-//                         "_publishUrl": "http://localhost:4503/content/dam/msil/images/desktop/variants/zxi1.jpg"
-
-//                     },
-
-//                     "carName": "New Brezza K15C ISG 5MT ZXI",
-
-//                     "variant_name": "Zxi",
-
-//                     "variant_id": "bz-zxi",
-
-//                     "ex_price": "11,04,500",
-
-//                     "ex_location": "Delhi",
-
-//                     "_metadata": {
-
-//                         "stringArrayMetadata": [
-
-//                             {
-
-//                                 "value": [
-
-//                                     "msil:features/steel-wheels-with-wheel-cover",
-
-//                                     "msil:features/projector-headlamps",
-
-//                                     "msil:features/roof-end-spoiler",
-
-//                                     "msil:features/chrome-accentuated-front-grille",
-
-//                                     "msil:features/wheel-arch-cladding"
-
-//                                 ]
-
-//                             }
-
-//                         ]
-
-//                     }
-
-//                 }
-
-//             ]
-
-//         }
-
-//     }
-
-// }
 
   const variantsList = jsonData.data.carVariantsList.items;
 
@@ -228,7 +17,7 @@ export default async function decorate(block) {
   const nextButton = document.createElement("div");
   previousButton.classList.add("swiper-button-prev");
   nextButton.classList.add("swiper-button-next");
-  variantsList.forEach((item,index) => {
+  variantsList.forEach((item, index) => {
     const variantCardDiv = document.createElement("div");
     variantCardDiv.classList.add("variant-card", "swiper-slide");
 
@@ -252,7 +41,7 @@ export default async function decorate(block) {
     const topSellingContainer = document.createElement("div");
     const topSellingText = document.createElement("p");
 
-    if(index === 0){      
+    if (index === 0) {
       topSellingContainer.classList.add("top-selling-container");
       topSellingText.classList.add("top-selling-text");
       topSellingText.innerText = "Top Selling";
@@ -314,7 +103,7 @@ export default async function decorate(block) {
         variantFeatureText.innerText = index.Text;
         variantFeatureList.appendChild(variantFeatureText);
 
-        if(count < 5){
+        if (count < 5) {
           variantFeatureUl.appendChild(variantFeatureList); // to be added.
           count++;
         }

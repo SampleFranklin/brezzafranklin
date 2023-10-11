@@ -149,7 +149,8 @@ ol,
 ul,
 pre,
 blockquote,
-button {
+button,
+input {
   margin: 0;
   padding: 0;
   border: 0;
@@ -258,6 +259,7 @@ main {
 
   .section.left-container {
     padding-top: 40px;
+    padding-bottom: 39px;
   }
 
   .authorblock-wrapper,
@@ -266,11 +268,3 @@ main {
     width: 32.1%;
   }
 }
-
-/* .carousel-container,
-.tagsblock-container,
-.authorblock-container,
-.accordion-container,
-.columns-container {
-  display: none;
-} */
