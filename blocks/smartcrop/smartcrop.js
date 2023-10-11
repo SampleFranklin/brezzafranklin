@@ -11,17 +11,29 @@ export default async function decorate(block){
             assetId = row.children[1].innerHTML;
         }
     })
+
+    var s7interactivevideoviewer = new s7viewers.InteractiveVideoViewer({
+		"containerId" : "s7smartcropvideo_div",
+		"params" : { 
+			"serverurl" : "https://s7ap1.scene7.com/is/image/",
+			"contenturl" : "https://s7ap1.scene7.com/is/content/", 
+			"config" : "nagarrosoftwarepvtltd/Shoppable_Video_Dark",
+			"interactivedata": "nagarrosoftwarepvtltd/1_Maruti%20Suzuki_Brezza%20Launch_60se.mp4.svideo",
+			"VideoPlayer.contenturl": "https://s7ap1.scene7.com/is/content/",
+			"videoserverurl": "https://s7ap1.scene7.com/is/content",
+			"asset" : assetId }
+	})
     
-    var s7smartcropvideoviewer = new s7viewers.SmartCropVideoViewer({
-            "containerId" : "s7smartcropvideo_div",
-            "params" : { 
-              "serverurl" : "https://s7ap1.scene7.com/is/image/",
-              "contenturl" : "https://s7ap1.scene7.com/is/content/", 
-              "config" : "chinmaypanditapac01/SmartCropVideo_social",
-              "videoserverurl": "https://s7ap1.scene7.com/is/content",
-              "asset" : assetId 
-        }
-    })
+    // var s7smartcropvideoviewer = new s7viewers.SmartCropVideoViewer({
+    //         "containerId" : "s7smartcropvideo_div",
+    //         "params" : { 
+    //           "serverurl" : "https://s7ap1.scene7.com/is/image/",
+    //           "contenturl" : "https://s7ap1.scene7.com/is/content/", 
+    //           "config" : "chinmaypanditapac01/SmartCropVideo_social",
+    //           "videoserverurl": "https://s7ap1.scene7.com/is/content",
+    //           "asset" : assetId 
+    //     }
+    // })
     s7smartcropvideoviewer.init();
 
     const containerDiv = document.createElement('div');
