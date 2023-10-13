@@ -1,15 +1,1 @@
-export default function decorate(block){
-    // decorate the quote as blockquote element
-    const quoteDiv = block.querySelector(':scope > div > div');
-    const blockquote = document.createElement('blockquote');
-    blockquote.innerHTML = `"${quoteDiv.innerHTML}"`
-    quoteDiv.parentElement.replaceWith(blockquote);
-
-    // decorate the author
-    const authorDiv = block.querySelector(':scope > div > div');
-    if(authorDiv){
-        const p = document.createElement('p');
-        p.innerHTML = `<em> - ${authorDiv.innerText}</em>`
-        authorDiv.parentElement.replaceWith(p);
-    }
-}
+export default function decorate(e) { const t = e.querySelector(":scope > div > div"), n = document.createElement("blockquote"); n.innerHTML = `"${t.innerHTML}"`, t.parentElement.replaceWith(n); const c = e.querySelector(":scope > div > div"); if (c) { const e = document.createElement("p"); e.innerHTML = `<em> - ${c.innerText}</em>`, c.parentElement.replaceWith(e) } }
