@@ -1,0 +1,38 @@
+.table {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .table table {
+    width: 60%;
+    max-width: 60%;
+    border-collapse: collapse;
+    font-size: var(--body-font-size-xs);
+  }
+  
+  @media (min-width: 600px) {
+    .table table {
+      font-size: var(--body-font-size-s);
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .table table {
+      font-size: var(--body-font-size-m);
+    }
+  }
+  
+  .table table th {
+    font-weight: 700;
+  }
+  
+  .table table th, .table table td {
+    padding: 8px 16px;
+    text-align: left;
+  }
+  
+  /* striped variant */
+  .table.striped tbody tr:nth-child(odd) {
+    background-color: var(--overlay-background-color);
+  }
+  
