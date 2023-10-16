@@ -120,6 +120,9 @@
     color: #8B8B8C;
     padding-left: 8px;
     display: inline-block;
+    height: 34px;
+    vertical-align: middle;
+    margin-top: 8px;
 }
 
 .variant-feature {
@@ -178,7 +181,7 @@
 }
 
 .variant-button-container .test-drive-btn {
-    font: 14px/32px 'Source Sans Pro';
+    font: 14px/32px 'Roboto Regular';
     color: #202020;
 }
 
@@ -196,20 +199,22 @@
 
 .recommendedvariants-wrapper .compare-cta label {
     padding-left: 15px;
-    font: 14px/32px;
+    font-size: 14px;
+    line-height: 32px;
     color: #202020;
 }
 
 
 .recommendedvariants-wrapper .test-drive-btn a {
     text-decoration: underline;
-    font: 14px/32px 'Source Sans Pro';
+    font: 14px/32px 'Roboto Regular';
     color: #202020;
 
 }
 
 .recommendedvariants-container .swiper-slide {
     box-sizing: border-box;
+    height: auto;
 }
 
 .recommendedvariants-container .swiper-button-next {
@@ -269,11 +274,13 @@
     }
 
     .recommendedvariants-wrapper .test-drive-btn a {
-        font: 12px/30px;
+        font-size: 12px;
+        line-height: 30px;
     }
 
     .recommendedvariants-wrapper .compare-cta label {
-        font: 13px/30px;
+        font-size: 13px;
+        line-height: 30px;
     }
 
     .recommendedvariants-container .swiper-button-prev {
