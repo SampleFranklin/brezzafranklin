@@ -1,1 +1,183 @@
-export default async function decorate(e) { const t = e.querySelector(":scope > div > div > a").getAttribute("href"), a = await fetch("https://footer--brezzafranklin--samplefranklin.hlx.page/placeholders.json"), n = await a.json(), d = await fetch(t), i = (await d.json()).data.carVariantsList.items, c = document.createElement("div"); c.classList.add("variant-details", "swiper-wrapper"); const s = document.createElement("div"), r = document.createElement("div"); s.classList.add("swiper-button-prev"), r.classList.add("swiper-button-next"), i.forEach(((e, t) => { const a = document.createElement("div"); a.classList.add("variant-card", "swiper-slide"); const d = document.createElement("div"); d.classList.add("card-top"); const i = document.createElement("img"); i.classList.add("variant-img"), i.src = e.imageUrl._publishUrl, i.alt = e.variant_name; const s = document.createElement("div"); s.classList.add("variant-share-section"); const r = document.createElement("p"); r.classList.add("variant-share-text"), r.innerText = "Share"; const l = document.createElement("div"), o = document.createElement("p"); 0 === t && (l.classList.add("top-selling-container"), o.classList.add("top-selling-text"), o.innerText = "Top Selling"), l.appendChild(o), s.appendChild(r), s.appendChild(l), d.appendChild(i), d.appendChild(s); const p = document.createElement("div"); p.classList.add("variant-desc"); const m = document.createElement("div"); m.classList.add("variant-button-container"); const u = document.createElement("p"); u.classList.add("variant-title"), u.innerText = e.carName; const h = document.createElement("div"); h.classList.add("variant-price-section"); const v = document.createElement("p"); v.classList.add("variant-price"), v.innerText = "₹ " + e.ex_price; const E = document.createElement("p"); E.classList.add("variant-price-text"), E.innerText = "Ex-showroom, " + e.ex_location, h.appendChild(v), h.appendChild(E); const C = document.createElement("p"); C.classList.add("variant-feature"), C.innerText = "Features"; const L = document.createElement("ul"); L.classList.add("variant-feature-ul"); const x = e._metadata.stringArrayMetadata[0]; if (x) { var w = 0; for (var f of x.value) { const e = document.createElement("li"); e.classList.add("variant-feature-list"); const t = document.createElement("p"); t.classList.add("variant-feature-text"); const a = n.data.find((e => e.Key === f)); t.innerText = a.Text, e.appendChild(t), w < 5 && (L.appendChild(e), w++) } } const b = document.createElement("button"); b.classList.add("test-drive-btn"); const T = document.createElement("a"); T.href = "https://www.marutisuzuki.com/", T.innerText = "Book a Test Drive", b.appendChild(T); const g = document.createElement("button"); g.classList.add("specification-btn"); const k = document.createElement("a"); k.href = "https://www.marutisuzuki.com/", k.innerText = "VIEW FULL SPECIFICATIONS", g.appendChild(k); const S = document.createElement("div"); S.classList.add("compare-cta"); const y = document.createElement("input"); y.type = "checkbox", y.name = "compare", y.value = "compare"; const I = document.createElement("label"); I.for = "compareIt", I.classList.add("unchecked"), I.innerText = "Add to Compare", S.appendChild(y), S.appendChild(I), p.appendChild(u), p.appendChild(h), p.appendChild(C), p.appendChild(L), m.appendChild(b), m.appendChild(g), m.appendChild(S), a.appendChild(d), a.appendChild(p), a.appendChild(m), c.appendChild(a) })), e.parentElement.appendChild(s), e.parentElement.appendChild(r); e.querySelector(":scope > div").replaceWith(c); new Swiper(".recommendedvariants-container .recommendedvariants", { navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }, watchSlidesProgress: !0, spaceBetween: "41px", breakpoints: { 390: { slidesPerView: 1 }, 1023: { slidesPerView: 3 } } }) }
+export default async function decorate(block) {
+  const anchorTag = block.querySelector(":scope > div > div > a");
+  const queryURI = anchorTag.getAttribute("href");
+
+  const tagsResponse = await fetch("https://footer--brezzafranklin--samplefranklin.hlx.page/placeholders.json");
+  const tagsJson = await tagsResponse.json();
+
+  const response = await fetch(queryURI);
+  const jsonData = await response.json();
+
+
+  const variantsList = jsonData.data.carVariantsList.items;
+
+  const variantDetailsDiv = document.createElement("div");
+  variantDetailsDiv.classList.add("variant-details", "swiper-wrapper");
+  const previousButton = document.createElement("div");
+  const nextButton = document.createElement("div");
+  previousButton.classList.add("swiper-button-prev");
+  nextButton.classList.add("swiper-button-next");
+  variantsList.forEach((item, index) => {
+    const variantCardDiv = document.createElement("div");
+    variantCardDiv.classList.add("variant-card", "swiper-slide");
+
+    // Decorating card-top div
+    const cardTopDiv = document.createElement("div");
+    cardTopDiv.classList.add("card-top");
+
+    const cardImgTag = document.createElement("img");
+    cardImgTag.classList.add("variant-img");
+    cardImgTag.src = item.imageUrl._publishUrl;
+    // cardImgTag.src = item.imageUrl._publish;
+    cardImgTag.alt = item.variant_name;
+
+    const variantShareSection = document.createElement("div");
+    variantShareSection.classList.add("variant-share-section");
+
+    const variantShareText = document.createElement("p");
+    variantShareText.classList.add("variant-share-text");
+    variantShareText.innerText = "Share";
+
+    const topSellingContainer = document.createElement("div");
+    const topSellingText = document.createElement("p");
+
+    if (index === 0) {
+      topSellingContainer.classList.add("top-selling-container");
+      topSellingText.classList.add("top-selling-text");
+      topSellingText.innerText = "Top Selling";
+    }
+
+    topSellingContainer.appendChild(topSellingText);
+    variantShareSection.appendChild(variantShareText);
+    variantShareSection.appendChild(topSellingContainer);
+
+    cardTopDiv.appendChild(cardImgTag);
+    cardTopDiv.appendChild(variantShareSection);
+
+    // Decorating variant-desc div
+    const variantDescDiv = document.createElement("div");
+    variantDescDiv.classList.add("variant-desc");
+    // Decorating variant-desc div
+    const variantButtonContainer = document.createElement("div");
+    variantButtonContainer.classList.add("variant-button-container");
+
+    const variantTitle = document.createElement("p");
+    variantTitle.classList.add("variant-title");
+    variantTitle.innerText = item.carName; // To be added
+
+    // Fetch Price
+    const variantPriceSection = document.createElement("div");
+    variantPriceSection.classList.add("variant-price-section");
+
+    const variantPrice = document.createElement("p");
+    variantPrice.classList.add("variant-price");
+    variantPrice.innerText = "₹ " + item.ex_price;
+
+    const variantPriceText = document.createElement("p");
+    variantPriceText.classList.add("variant-price-text");
+    variantPriceText.innerText = "Ex-showroom, " + item.ex_location;
+
+    variantPriceSection.appendChild(variantPrice);
+    variantPriceSection.appendChild(variantPriceText); // To be added
+
+    const variantFeature = document.createElement("p");
+    variantFeature.classList.add("variant-feature");
+    variantFeature.innerText = "Features"; // To be added
+
+    // Fetch Features;
+    const variantFeatureUl = document.createElement("ul");
+    variantFeatureUl.classList.add("variant-feature-ul");
+
+    const featuresList = item._metadata.stringArrayMetadata[0];
+    if (featuresList) {
+      var count = 0;
+      for (var feature of featuresList.value) {
+        const variantFeatureList = document.createElement("li");
+        variantFeatureList.classList.add("variant-feature-list");
+
+        const variantFeatureText = document.createElement("p");
+        variantFeatureText.classList.add("variant-feature-text");
+
+        const index = tagsJson.data.find((item) => item.Key === feature);
+
+        variantFeatureText.innerText = index.Text;
+        variantFeatureList.appendChild(variantFeatureText);
+
+        if (count < 5) {
+          variantFeatureUl.appendChild(variantFeatureList); // to be added.
+          count++;
+        }
+      }
+    }
+
+    // Buttons - (Book a Test Drive) & (VIEW FULL SPECIFICATIONS)
+    const buttonTestDrive = document.createElement("button");
+    buttonTestDrive.classList.add("test-drive-btn");
+    const testDriveLink = document.createElement("a");
+    testDriveLink.href = "https://www.marutisuzuki.com/";
+    testDriveLink.innerText = "Book a Test Drive";
+    buttonTestDrive.appendChild(testDriveLink); // To be added
+
+    const buttonSpecification = document.createElement("button");
+    buttonSpecification.classList.add("specification-btn");
+    const specificationLink = document.createElement("a");
+    specificationLink.href = "https://www.marutisuzuki.com/";
+    specificationLink.innerText = "VIEW FULL SPECIFICATIONS";
+    buttonSpecification.appendChild(specificationLink); // To be added
+
+    // Add to Compare CTA
+    const compareCTA = document.createElement("div");
+    compareCTA.classList.add("compare-cta");
+
+    const compareInput = document.createElement("input");
+    compareInput.type = "checkbox";
+    compareInput.name = "compare";
+    compareInput.value = "compare";
+    const uncheckedLabel = document.createElement("label");
+    uncheckedLabel.for = "compareIt";
+    uncheckedLabel.classList.add("unchecked");
+    uncheckedLabel.innerText = "Add to Compare";
+
+    compareCTA.appendChild(compareInput);
+    compareCTA.appendChild(uncheckedLabel);
+
+    variantDescDiv.appendChild(variantTitle);
+    variantDescDiv.appendChild(variantPriceSection);
+    variantDescDiv.appendChild(variantFeature);
+    variantDescDiv.appendChild(variantFeatureUl);
+    variantButtonContainer.appendChild(buttonTestDrive);
+    variantButtonContainer.appendChild(buttonSpecification);
+    variantButtonContainer.appendChild(compareCTA);
+
+    // add to main
+    variantCardDiv.appendChild(cardTopDiv);
+    variantCardDiv.appendChild(variantDescDiv);
+    variantCardDiv.appendChild(variantButtonContainer);
+    variantDetailsDiv.appendChild(variantCardDiv);
+  });
+
+  block.parentElement.appendChild(previousButton);
+  block.parentElement.appendChild(nextButton);
+  const parentDiv = block.querySelector(":scope > div");
+  parentDiv.replaceWith(variantDetailsDiv);
+
+  const swiper = new Swiper(
+    ".recommendedvariants-container .recommendedvariants",
+    {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      watchSlidesProgress: true,
+      spaceBetween: "41px",
+      breakpoints: {
+        390: {
+          slidesPerView: 1,
+        },
+        1023: {
+          slidesPerView: 3,
+        },
+      },
+    }
+  );
+}

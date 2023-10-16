@@ -1,1 +1,28 @@
-export default function decorate(e){const n=document.createElement("div");[...e.children].forEach((e=>{const i=document.createElement("div");if(i.classList.add("tagsblock-"+e.children[0].innerHTML),"title"===e.children[0].innerHTML){const i=document.createElement("div");i.classList.add("tagsblock-"+e.children[0].innerHTML),i.innerHTML=`<p> ${e.children[1].innerHTML} </p>`,n.appendChild(i)}else{const t=document.createElement("ul");t.classList.add(e.children[0].innerHTML+"-list"),t.id=e.children[0].innerHTML+"-list";const d=e.children[1].children;for(let e of d){const n=document.createElement("li");n.innerHTML=e.innerHTML,t.appendChild(n)}i.appendChild(t),n.appendChild(i)}})),e.innerHTML=n.innerHTML}
+export default function decorate(block) {
+    const blockAuthor = document.createElement('div');
+    [...block.children].forEach((row) => {
+        const propertydiv = document.createElement('div');
+        propertydiv.classList.add(`tagsblock-` + row.children[0].innerHTML);
+
+        if (row.children[0].innerHTML === "title") {
+            const propertydiv = document.createElement('div');
+            propertydiv.classList.add(`tagsblock-` + row.children[0].innerHTML);
+            propertydiv.innerHTML = `<p> ${row.children[1].innerHTML} </p>`;
+            blockAuthor.appendChild(propertydiv);
+        } else {
+            const redirectList = document.createElement('ul');
+            redirectList.classList.add(row.children[0].innerHTML + '-list');
+            redirectList.id = row.children[0].innerHTML + '-list'
+            const redirectL = row.children[1].children;
+            for (let link of redirectL) {
+                const li = document.createElement('li');
+                li.innerHTML = link.innerHTML;
+                redirectList.appendChild(li);
+            }
+            propertydiv.appendChild(redirectList);
+            blockAuthor.appendChild(propertydiv);
+        }
+
+    });
+    block.innerHTML = blockAuthor.innerHTML;
+}

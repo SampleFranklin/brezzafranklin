@@ -1,1 +1,40 @@
-import { decorateMain } from "../../scripts/scripts.js"; import { loadBlocks } from "../../scripts/lib-franklin.js"; async function loadFragment(t) { if (t && t.startsWith("/")) { const e = await fetch(`${t}.plain.html`); if (e.ok) { const t = document.createElement("main"); return t.innerHTML = await e.text(), decorateMain(t), await loadBlocks(t), t } } return null } export default async function decorate(t) { const e = t.querySelector("a"), a = e ? e.getAttribute("href") : t.textContent.trim(), r = await loadFragment(a); if (r) { const e = r.querySelector(":scope .section"); e && (t.closest(".section").classList.add(...e.classList), t.closest(".fragment-wrapper").replaceWith(...e.childNodes)) } }
+import {
+    decorateMain,
+  } from '../../scripts/scripts.js';
+  
+  import {
+    loadBlocks,
+  } from '../../scripts/lib-franklin.js';
+  
+  /**
+   * Loads a fragment.
+   * @param {string} path The path to the fragment
+   * @returns {HTMLElement} The root element of the fragment
+   */
+  async function loadFragment(path) {
+    if (path && path.startsWith('/')) {
+      const resp = await fetch(`${path}.plain.html`);
+      if (resp.ok) {
+        const main = document.createElement('main');
+        main.innerHTML = await resp.text();
+        decorateMain(main);
+        await loadBlocks(main);
+        return main;
+      }
+    }
+    return null;
+  }
+  
+  export default async function decorate(block) {
+    const link = block.querySelector('a');
+    console.log(link);
+    const path = link ? link.getAttribute('href') : block.textContent.trim();
+    const fragment = await loadFragment(path);
+    if (fragment) {
+      const fragmentSection = fragment.querySelector(':scope .section');
+      if (fragmentSection) {
+        block.closest('.section').classList.add(...fragmentSection.classList);
+        block.closest('.fragment-wrapper').replaceWith(...fragmentSection.childNodes);
+      }
+    }
+  }

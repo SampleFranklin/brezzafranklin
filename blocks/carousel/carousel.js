@@ -1,1 +1,59 @@
-export default function decorate(e) { e.classList.add("swiper-wrapper"), [...e.children].forEach(((e, s) => { e.classList.add("swiper-slide");["image", "text"].forEach(((s, t) => { e.children[t].classList.add(`carousel-${s}`) })) })); const s = document.createElement("div"), t = document.createElement("div"); s.classList.add("swiper-button-prev"), t.classList.add("swiper-button-next"), e.classList.contains("stories") && (s.classList.add("stories-prev"), t.classList.add("stories-next")), e.parentElement.appendChild(s), e.parentElement.appendChild(t); new Swiper(".feature .carousel-wrapper", { navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }, watchSlidesProgress: !0, spaceBetween: "27px", breakpoints: { 390: { slidesPerView: 1 }, 1023: { slidesPerView: 3 } } }); new Swiper(".stories .carousel-wrapper", { slidesPerView: 3, navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }, watchSlidesProgress: !0, breakpoints: { 390: { slidesPerView: 1.4, spaceBetween: "16px" }, 1023: { slidesPerView: 3 } } }) }
+export default function decorate(block) {
+  block.classList.add("swiper-wrapper");
+  [...block.children].forEach((row, i) => {
+    row.classList.add("swiper-slide");
+    const classes = ["image", "text"];
+
+    classes.forEach((e, j) => {
+      row.children[j].classList.add(`carousel-${e}`);
+    });
+  });
+
+  const previousButton = document.createElement("div");
+  const nextButton = document.createElement("div");
+  previousButton.classList.add("swiper-button-prev");
+  nextButton.classList.add("swiper-button-next");
+
+  if (block.classList.contains("stories")) {
+    previousButton.classList.add("stories-prev");
+    nextButton.classList.add("stories-next");
+  }
+
+  block.parentElement.appendChild(previousButton);
+  block.parentElement.appendChild(nextButton);
+
+  const swiper = new Swiper(".feature .carousel-wrapper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    watchSlidesProgress: true,
+    spaceBetween: "27px",
+    breakpoints: {
+      390: {
+        slidesPerView: 1,
+      },
+      1023:{
+        slidesPerView: 3,
+      }
+    },
+  });
+  new Swiper(".stories .carousel-wrapper", {
+    slidesPerView: 3,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    watchSlidesProgress: true,
+    breakpoints: {
+      390: {
+        slidesPerView: 1.4,
+        spaceBetween: "16px",
+      },
+      1023:{
+        slidesPerView: 3,
+      }
+    },
+  });
+}
+

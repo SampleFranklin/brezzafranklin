@@ -1,5 +1,5 @@
 .footer-wrapper {
-  clear: both
+  clear: both;
 }
 
 .footer-content {
@@ -7,25 +7,25 @@
   color: #fff;
   padding: 3.5rem 5.25rem .625rem;
   width: 100%;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 .footer-content * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 .footer-cols {
-  display: flex
+  display: flex;
 }
 
 .social-icons .list-content img {
   height: 38px;
-  width: 38px
+  width: 38px;
 }
 
 .footerbar-list {
   display: flex;
-  column-gap: 1.25rem
+  column-gap: 1.25rem;
 }
 
 .col-reach-us p,
@@ -40,11 +40,11 @@
 }
 
 .col-list-heading {
-  pointer-events: none
+  pointer-events: none;
 }
 
 .col-list-content {
-  display: block
+  display: block;
 }
 
 .col-reach-us p,
@@ -74,7 +74,7 @@
 
 .contact-number p,
 .contact-email p {
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 
 .col-reach-us .reach-us {
@@ -95,26 +95,27 @@
 }
 
 .col-reach-us .col-list-content li:first-child {
-  padding-bottom: 15px
+  padding-bottom: 15px;
 }
 
 .col-corporate {
   flex: 0 0 13.67%;
   max-width: 13.67%;
-  padding-right: .625rem;
-  margin-left: 20px
+
+  padding-right: 0.625rem;
+  margin-left: 20px;
 }
 
 .col-sales {
   flex: 0 0 18.08%;
   max-width: 18.08%;
-  padding-right: .625rem
+  padding-right: 0.625rem;
 }
 
 .col-more {
   flex: 0 0 19.02%;
   max-width: 19.02%;
-  padding-right: .625rem
+  padding-right: 0.625rem;
 }
 
 .col-list-content {
@@ -122,7 +123,7 @@
 }
 
 .col-list-content li a {
-  color: #fff
+  color: #fff;
 }
 
 .col-corporate .col-list-content li,
@@ -152,7 +153,7 @@
   -ms-flex: 0 0 19.78;
   flex: 0 0 19.78%;
   max-width: 19%;
-  margin-right: 2.438rem
+  margin-right: 2.438rem;
 }
 
 .contact-number p,
@@ -166,7 +167,7 @@
   display: flex;
   justify-content: flex-end;
   margin-bottom: 1.8125rem;
-  margin-top: 23px
+  margin-top: 23px;
 }
 
 .col-corporate {
@@ -178,7 +179,7 @@
 }
 
 .text p {
-  text-align: right
+  text-align: right;
 }
 
 .social-icons .list-content li:not(:last-child) {
@@ -186,12 +187,13 @@
 }
 
 .social-ctas .list-content {
-  margin-top: .688rem
+  margin-top: 0.688rem;
 }
+
 
 .social-ctas .list-content {
   display: flex;
-  justify-content: flex-end
+  justify-content: flex-end;
 }
 
 .social-ctas .list-content img {
@@ -221,7 +223,7 @@
 .footer-bar-wrapper {
   background: #000000 0% 0% no-repeat padding-box;
   opacity: 1;
-  height: 4.938rem
+  height: 4.938rem;
 }
 
 .footer-bar {
@@ -229,12 +231,12 @@
   margin: 0 5.8%;
   height: 100%;
   align-items: center;
-  column-gap: 1.25rem
+  column-gap: 1.25rem;
 }
 
 .copyright-text,
 .copyright-list {
-  color: #FFFFFF
+  color: #FFFFFF;
 }
 
 .copyright-text {
@@ -249,6 +251,7 @@
   padding-right: 5rem;
   text-align: left
 }
+
 
 .footerbar-list li {
   color: #fff;
@@ -265,10 +268,10 @@
 }
 
 .footerbar-list li a {
-  color: #fff
+  color: #fff;
 }
 
-@media screen and (max-width:1300px) {
+@media screen and (max-width: 1300px) {
 
   .col-reach-us,
   .col-social {
@@ -289,21 +292,22 @@
 
   .footerbar-list li,
   .copyright-text p {
-    white-space: nowrap
+    white-space: nowrap;
   }
 
   .copyright-text {
     padding-right: 2rem;
+    ;
   }
 
   .col-more {
-    margin-right: 0
+    margin-right: 0;
   }
 }
 
-@media screen and (max-width:1023px) {
+@media screen and (max-width: 1023px) {
   .col-list-heading {
-    pointer-events: all
+    pointer-events: all;
   }
 
   .footer-content {
@@ -336,7 +340,7 @@
   }
 
   .col-corporate {
-    margin-left: 0
+    margin-left: 0;
   }
 
   .col-reach-us p,
@@ -353,7 +357,7 @@
 
   .col-reach-us p {
     margin-bottom: .625rem;
-    max-width: 100%
+    max-width: 100%;
   }
 
   .col-reach-us,
@@ -377,7 +381,8 @@
 
   .col-corporate {
     display: block;
-    padding-left: .9375rem
+    padding-left: .9375rem;
+
   }
 
   .col-more {
@@ -386,7 +391,7 @@
   }
 
   .footer-cols {
-    flex-direction: column
+    flex-direction: column;
   }
 
   .col-corporate,
@@ -409,7 +414,7 @@
   .col-corporate p.active,
   .col-sales p.active,
   .col-more p.active {
-    border-bottom: 0
+    border-bottom: 0;
   }
 
   .col-corporate p,
@@ -485,19 +490,22 @@
     font-style: normal;
     letter-spacing: 0;
     line-height: 1.3125rem;
-    opacity: 1
+    opacity: 1;
   }
 
   .social-ctas {
     display: flex;
-    justify-content: center
+    justify-content: center;
   }
+
+  /* till here */
 
   .social-ctas {
     display: inline-block;
     text-align: center;
     width: 100%
   }
+
 
   .social-ctas {
     display: -webkit-inline-box;
@@ -547,6 +555,7 @@
     width: 100%
   }
 
+
   .footnote-list li p {
     color: #fff;
     display: inline;
@@ -561,21 +570,22 @@
   }
 }
 
-@media screen and (max-width:1023px) {
+@media screen and (max-width: 1023px) {
   .footer-bar {
     display: block;
     margin: -.3125rem 0 0 0;
+    /* max-width: 100%; */
     padding: 0 .9375rem 1.5rem;
     position: relative;
-    text-align: center
+    text-align: center;
   }
 
   .footer-bar-wrapper {
-    height: auto
+    height: auto;
   }
 
   .footerbar-list {
-    flex-direction: column
+    flex-direction: column;
   }
 
   .footer-bar .copyright-text {
@@ -603,19 +613,20 @@
     line-height: 1.1875rem;
     opacity: 1;
     text-align: center;
-    padding-bottom: .625rem
+    padding-bottom: 0.625rem;
+
   }
 
   .col-reach-us p {
-    font-family: Roboto Bold
+    font-family: Roboto Bold;
   }
 
   .col-reach-us .col-list-content {
-    opacity: 1
+    opacity: 1;
   }
 
   .col-social .text p {
-    font-family: Roboto Bold
+    font-family: Roboto Bold;
   }
 
   .contact-number p,
@@ -636,11 +647,11 @@
   .contact-email,
   .contact-number {
     display: inline-flex;
-    margin-top: 0
+    margin-top: 0;
   }
 
   .contact-number {
-    margin-right: 15px
+    margin-right: 15px;
   }
 
   .col-reach-us .col-list-content li {
@@ -656,18 +667,18 @@
   .col-sales .col-list-content,
   .col-corporate .col-list-content,
   .col-more .col-list-content {
-    display: none
+    display: none;
   }
 
   .col-more,
   .col-sales,
   .col-corporate {
     display: block;
-    padding-left: .9375rem;
-    padding-right: .9375rem
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem
   }
 
   .footnote-list li {
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
   }
 }

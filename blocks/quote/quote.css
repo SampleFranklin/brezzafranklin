@@ -1,23 +1,23 @@
-.quote {
+.quote{
     background: var(--overlay-background-color);
     padding: 1em;
-    margin: 1rem 0
+    margin: 1rem 0;
 }
 
-.quote blockquote {
+.quote blockquote{
     font-weight: 700;
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
-.quote blockquote::after {
+.quote blockquote::after{
     content: "";
     display: block;
     position: relative;
-    top: .25rem;
+    top: 0.25rem;
     width: 5pc;
-    border-bottom: 2px solid gray
+    border-bottom: 2px solid gray;
 }
 
-.quote p strong {
-    font-weight: 500
+.quote p strong{
+    font-weight: 500;
 }

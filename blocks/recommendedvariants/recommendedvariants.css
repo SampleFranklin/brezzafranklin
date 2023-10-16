@@ -1,44 +1,45 @@
 .recommendedvariants-container {
     margin-top: 63px;
-    position: relative
+    position: relative;
 }
 
 .recommendedvariants-container .swiper-button-next,
 .recommendedvariants-container .swiper-button-prev {
-    top: 15px
+    top: 15px;
 }
 
 .recommendedvariants-container .default-content-wrapper p {
-    font: 26px/48px 'Roboto Medium'
+    font: 26px/48px 'Roboto Medium';
 }
 
 .recommendedvariants-container .default-content-wrapper:last-child {
     margin-top: 55px;
-    margin-bottom: 22px
+    margin-bottom: 22px;
 }
 
 .recommendedvariants-container .default-content-wrapper:last-child p {
     font: normal normal 300 12px/48px 'Roboto Light';
-    display: inline-block
+    display: inline-block;
 }
 
 .recommendedvariants-container .default-content-wrapper:last-child .button-container {
-    float: right
+    float: right;
 }
 
 .recommendedvariants-container .default-content-wrapper:last-child .button-container a {
+
     font: 18px/24px 'Roboto Medium';
     color: #234D9C;
     padding: 11px 28px;
     display: inline-block;
-    border: 1px solid #234D9C
+    border: 1px solid #234D9C;
 }
 
 .recommendedvariants-container .default-content-wrapper:last-child .button-container .isDisabled {
     color: currentColor;
     pointer-events: none;
     opacity: .5;
-    text-decoration: none
+    text-decoration: none;
 }
 
 .recommendedvariants-container .default-content-wrapper:last-child .button-container a::before {
@@ -48,23 +49,23 @@
     display: inline-block;
     width: 18px;
     padding-left: 10px;
-    vertical-align: middle
+    vertical-align: middle;
 }
 
 .recommendedvariants-wrapper {
     margin-top: 34px;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .recommendedvariants-wrapper .card-top {
-    position: relative
+    position: relative;
 }
 
 .recommendedvariants-wrapper .variant-share-text {
     position: absolute;
     top: 15px;
     left: 34px;
-    font: 14px/19px 'Roboto Medium'
+    font: 14px/19px 'Roboto Medium';
 }
 
 .recommendedvariants-wrapper .variant-share-text::before {
@@ -74,8 +75,9 @@
     height: 12px;
     width: 14px;
     display: inline-block;
-    margin-right: 5px
+    margin-right: 5px;
 }
+
 
 .recommendedvariants-wrapper .top-selling-container {
     position: absolute;
@@ -83,7 +85,7 @@
     right: 15px;
     background: #000 0% 0% no-repeat padding-box;
     opacity: 1;
-    -webkit-transform: skew(-30deg)
+    -webkit-transform: skew(-30deg);
 }
 
 .recommendedvariants-wrapper .top-selling-text {
@@ -91,47 +93,47 @@
     color: #FFFFFF;
     text-transform: uppercase;
     -webkit-transform: skew(30deg);
-    padding: 2px 8px
+    padding: 2px 8px;
 }
 
 .recommendedvariants-wrapper .variant-desc {
     margin-top: 64px;
-    padding-left: 27px
+    padding-left: 27px;
 }
 
 .recommendedvariants-wrapper .swiper-slide {
-    border: 1px solid #707070
+    border: 1px solid #707070;
 }
 
 .variant-price-section {
     padding-top: 15px;
-    padding-bottom: 23px
+    padding-bottom: 23px;
 }
 
 .variant-price {
     font: 26px/34px 'Roboto Medium';
-    display: inline-block
+    display: inline-block;
 }
 
 .variant-price-text {
     font: 14px/19px 'Roboto Medium';
     color: #8B8B8C;
     padding-left: 8px;
-    display: inline-block
+    display: inline-block;
 }
 
 .variant-feature {
     font: 18px/24px 'Roboto Bold';
     color: #304659;
-    padding-bottom: 16px
+    padding-bottom: 16px;
 }
 
 .variant-feature-ul {
-    min-height: 170px
+    min-height: 170px;
 }
 
 .variant-feature-ul .variant-feature-list {
-    padding-bottom: 10px
+    padding-bottom: 10px;
 }
 
 .variant-feature-ul .variant-feature-list:before {
@@ -141,71 +143,73 @@
     height: 11px;
     width: 17px;
     display: inline-block;
-    margin-right: 11px
+    margin-right: 11px;
 }
 
 .variant-feature-ul .variant-feature-text {
     font: 16px/24px 'Roboto Light';
     color: #3B5266;
-    display: inline-block
+    display: inline-block;
 }
 
 .variant-button-container button {
     display: block;
     margin: 0 auto;
     width: 100%;
-    background: none
+    background: none;
 }
 
 .variant-button-container .specification-btn {
     font: 14px/19px 'Roboto Bold';
-    letter-spacing: .56px;
+    letter-spacing: 0.56px;
     padding: 17px 0;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 
 .variant-button-container .specification-btn a {
     color: #292985;
     padding: 14px 10%;
     border: 1px solid #292985;
-    display: inline-block
+    display: inline-block;
 }
 
 .variant-button-container .test-drive-btn {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 .variant-button-container .test-drive-btn {
     font: 14px/32px 'Source Sans Pro';
-    color: #202020
+    color: #202020;
 }
 
 .variant-button-container {
-    padding-bottom: 31px
+    padding-bottom: 31px;
 }
 
 .variant-button-container .compare-cta {
-    text-align: center
+    text-align: center;
 }
 
 .recommendedvariants-wrapper .variant-title {
-    font: 18px/24px 'Roboto Bold'
+    font: 18px/24px 'Roboto Bold';
 }
 
 .recommendedvariants-wrapper .compare-cta label {
     padding-left: 15px;
     font: 14px/32px;
-    color: #202020
+    color: #202020;
 }
+
 
 .recommendedvariants-wrapper .test-drive-btn a {
     text-decoration: underline;
     font: 14px/32px 'Source Sans Pro';
-    color: #202020
+    color: #202020;
+
 }
 
 .recommendedvariants-container .swiper-slide {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 .recommendedvariants-container .swiper-button-next {
@@ -214,7 +218,7 @@
     width: 80px;
     right: -84px;
     z-index: 0;
-    top: 50%
+    top: 50%;
 }
 
 .recommendedvariants-container .swiper-button-prev {
@@ -223,35 +227,36 @@
     width: 80px;
     left: -84px;
     z-index: 0;
-    top: 50%
+    top: 50%;
 }
 
-@media screen and (max-width:1023px) {
+
+@media screen and (max-width: 1023px) {
     .recommendedvariants-container .default-content-wrapper p {
-        font: 20px/24px 'Roboto Medium'
+        font: 20px/24px 'Roboto Medium';
     }
 
     .recommendedvariants-wrapper {
-        margin-top: 27px
+        margin-top: 27px;
     }
 
     .recommendedvariants-container .default-content-wrapper:last-child p {
-        display: none
+        display: none;
     }
 
     .recommendedvariants-container .default-content-wrapper:last-child p.button-container {
         display: block;
-        text-transform: uppercase
+        text-transform: uppercase;
     }
 
     .recommendedvariants-container .default-content-wrapper:last-child {
         margin-top: 20px;
         margin-bottom: 25px;
-        float: right
+        float: right;
     }
 
     .recommendedvariants-container {
-        margin-top: 35px
+        margin-top: 35px;
     }
 
     .recommendedvariants-container .swiper-button-next,
@@ -260,15 +265,15 @@
     }
 
     .variant-feature-ul {
-        min-height: initial
+        min-height: initial;
     }
 
     .recommendedvariants-wrapper .test-drive-btn a {
-        font: 12px/30px
+        font: 12px/30px;
     }
 
     .recommendedvariants-wrapper .compare-cta label {
-        font: 13px/30px
+        font: 13px/30px;
     }
 
     .recommendedvariants-container .swiper-button-prev {
@@ -278,14 +283,16 @@
         margin-right: 15px;
         width: 20px;
         height: 20px;
-        padding-right: 0
+        padding-right: 0;
     }
+
 
     .recommendedvariants-container .swiper-button-next {
         transform: rotate(180deg);
         background-image: url(/styles/icons/arrow-left-mobile.svg);
         width: 20px;
         height: 20px;
-        right: 0
+        right: 0;
     }
+
 }
