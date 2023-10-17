@@ -2,7 +2,7 @@ export default async function decorate(block) {
   const anchorTag = block.querySelector(":scope > div > div > a");
   const queryURI = anchorTag.getAttribute("href");
 
-  const tagsResponse = await fetch("https://footer--brezzafranklin--samplefranklin.hlx.page/placeholders.json");
+  const tagsResponse = await fetch("https://footer--brezzafranklin--samplefranklin.hlx.live/placeholders.json");
   const tagsJson = await tagsResponse.json();
 
   const response = await fetch(queryURI);
