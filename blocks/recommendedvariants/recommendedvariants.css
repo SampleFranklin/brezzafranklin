@@ -52,6 +52,7 @@
     vertical-align: middle;
 }
 
+
 .recommendedvariants-wrapper {
     margin-top: 34px;
     overflow: hidden;
@@ -192,6 +193,12 @@
 .variant-button-container .compare-cta {
     text-align: center;
 }
+
+.variant-button-container .compare-cta input[type=checkbox] {
+    accent-color: #292985;
+    cursor: pointer;
+}
+
 
 .recommendedvariants-wrapper .variant-title {
     font: 18px/24px 'Roboto Bold';
