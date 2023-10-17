@@ -32,7 +32,9 @@ window.addEventListener('resize', (event) => {
 executeAccordion();
 
 var checkboxes = document.querySelectorAll('input[type=checkbox][name=compare]');
-var compareButton = document.querySelector('[title="Compare Variants"]');
+var compareButtonParent = document.querySelector('.recommendedvariants-container');
+var compareButton = compareButtonParent.querySelector('[title="Compare Variants"]');
+
 compareButton.classList.add('isDisabled');
 for (var checkbox of checkboxes) {
   checkbox.addEventListener('change', function (event) {
