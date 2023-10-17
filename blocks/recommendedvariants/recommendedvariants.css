@@ -243,6 +243,7 @@
 
     .recommendedvariants-wrapper {
         margin-top: 27px;
+        overflow: initial;
     }
 
     .recommendedvariants-container .default-content-wrapper:last-child p {
@@ -257,7 +258,8 @@
     .recommendedvariants-container .default-content-wrapper:last-child {
         margin-top: 20px;
         margin-bottom: 25px;
-        float: right;
+        display: flex;
+        justify-content: center;
     }
 
     .recommendedvariants-container {
