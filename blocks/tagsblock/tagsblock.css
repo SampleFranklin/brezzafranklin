@@ -60,6 +60,7 @@
   padding: 30px 0 29px 32px;
   display: flex;
   justify-content: space-between;
+  color: #292985;
 }
 
 .suggestedfeatures-list li a::after {
