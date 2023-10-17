@@ -16,6 +16,10 @@
   order: 0;
 }
 
+.columns-2-cols .columns-img-col {
+  width: 50%;
+}
+
 .columns>div>.columns-img-col img {
   display: block;
   border-radius: 5px;
