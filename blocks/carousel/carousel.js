@@ -42,19 +42,17 @@ export default function decorate(block) {
     },
   });
   new Swiper(".stories .carousel-wrapper", {
-    slidesPerView: 3,
+    slidesPerView: 1.4,
+    spaceBetween: "16px",
     navigation: {
       nextEl: ".swiper-button-next.stories-next",
       prevEl: ".swiper-button-prev.stories-prev",
     },
     watchSlidesProgress: true,
     breakpoints: {
-      390: {
-        slidesPerView: 1.4,
-        spaceBetween: "16px",
-      },
       1023:{
         slidesPerView: 3,
+        spaceBetween: "0px"
       }
     },
   });
