@@ -15,8 +15,8 @@ export default async function decorate(block) {
   variantDetailsDiv.classList.add("variant-details", "swiper-wrapper");
   const previousButton = document.createElement("div");
   const nextButton = document.createElement("div");
-  previousButton.classList.add("swiper-button-prev");
-  nextButton.classList.add("swiper-button-next");
+  previousButton.classList.add("swiper-button-prev","recommendedvariants-prev");
+  nextButton.classList.add("swiper-button-next","recommendedvariants-next");
   variantsList.forEach((item, index) => {
     const variantCardDiv = document.createElement("div");
     variantCardDiv.classList.add("variant-card", "swiper-slide");
@@ -165,8 +165,8 @@ export default async function decorate(block) {
     ".recommendedvariants-container .recommendedvariants",
     {
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next.recommendedvariants-next",
+        prevEl: ".swiper-button-prev.recommendedvariants-prev",
       },
       watchSlidesProgress: true,
       spaceBetween: "41px",

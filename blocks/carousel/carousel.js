@@ -17,6 +17,9 @@ export default function decorate(block) {
   if (block.classList.contains("stories")) {
     previousButton.classList.add("stories-prev");
     nextButton.classList.add("stories-next");
+  }else{
+    previousButton.classList.add("feature-prev");
+    nextButton.classList.add("feature-next");
   }
 
   block.parentElement.appendChild(previousButton);
@@ -24,8 +27,8 @@ export default function decorate(block) {
 
   const swiper = new Swiper(".feature .carousel-wrapper", {
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next.feature-next",
+      prevEl: ".swiper-button-prev.feature-prev",
     },
     watchSlidesProgress: true,
     spaceBetween: "27px",
@@ -41,8 +44,8 @@ export default function decorate(block) {
   new Swiper(".stories .carousel-wrapper", {
     slidesPerView: 3,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next.stories-next",
+      prevEl: ".swiper-button-prev.stories-prev",
     },
     watchSlidesProgress: true,
     breakpoints: {
