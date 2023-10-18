@@ -15,7 +15,6 @@ export default function decorate(block) {
     video.append(source);
     
     videoContainer.append(video);
-    console.log(videoContainer);
 
     block.innerHTML = '';
     block.appendChild(videoContainer);

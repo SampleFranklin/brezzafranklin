@@ -9,6 +9,8 @@ export default function decorate(block) {
     });
   });
 
+
+
   const previousButton = document.createElement("div");
   const nextButton = document.createElement("div");
   previousButton.classList.add("swiper-button-prev");
@@ -17,6 +19,23 @@ export default function decorate(block) {
   if (block.classList.contains("stories")) {
     previousButton.classList.add("stories-prev");
     nextButton.classList.add("stories-next");
+    
+    const swiperSlides = block.querySelectorAll('.swiper-slide');
+
+    swiperSlides.forEach((slide) => {
+      const anchorElement = document.createElement('a');
+      slide.appendChild(anchorElement);
+
+      const carouselImageDiv = slide.querySelector('.carousel-image');
+      const carouselTextDiv = slide.querySelector('.carousel-text');
+
+      const anchorlinkDiv = carouselTextDiv.querySelector('a');
+      anchorElement.href = anchorlinkDiv.getAttribute("href");
+
+      anchorElement.appendChild(carouselImageDiv);
+      anchorElement.appendChild(carouselTextDiv);
+      slide.appendChild(anchorElement);
+    });
   }else{
     previousButton.classList.add("feature-prev");
     nextButton.classList.add("feature-next");
