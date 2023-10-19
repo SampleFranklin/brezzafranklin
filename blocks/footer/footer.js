@@ -97,11 +97,7 @@ export default async function decorate(block) {
     // replace with new markup.
     footerColDiv.innerHTML = '';
     footerColDiv.append(newDiv);
-    // footerColDiv.append(socialCol);
     footerColDiv.append(footnoteDiv);
-
-    // without wrapper
-    // block.innerHTML = footerColDiv.innerHTML;
 
     // with wrapper
     const footerContent = document.createElement('div');
@@ -152,11 +148,6 @@ export default async function decorate(block) {
     block.appendChild(footerBarWrapper);
     footerBarWrapper.appendChild(footerBarDiv);
     
-    // console.log(test);
-    // ** Without wrapper**
-    // block.appendChild(footerContent);
-    // block.appendChild(footerBarDiv);
-    // block.appendChild(footerBar);
     decorateIcons(footer);
   }
 }

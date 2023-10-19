@@ -8,7 +8,6 @@ export default async function decorate(block) {
   const response = await fetch(queryURI);
   const jsonData = await response.json();
 
-
   const variantsList = jsonData.data.carVariantsList.items;
 
   const variantDetailsDiv = document.createElement("div");
@@ -28,7 +27,6 @@ export default async function decorate(block) {
     const cardImgTag = document.createElement("img");
     cardImgTag.classList.add("variant-img");
     cardImgTag.src = item.imageUrl._publishUrl;
-    // cardImgTag.src = item.imageUrl._publish;
     cardImgTag.alt = item.variant_name;
 
     const variantShareSection = document.createElement("div");

@@ -9,8 +9,6 @@ export default function decorate(block) {
     });
   });
 
-
-
   const previousButton = document.createElement("div");
   const nextButton = document.createElement("div");
   previousButton.classList.add("swiper-button-prev");
