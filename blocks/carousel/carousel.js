@@ -17,6 +17,26 @@ export default function decorate(block) {
   if (block.classList.contains("stories")) {
     previousButton.classList.add("stories-prev");
     nextButton.classList.add("stories-next");
+    
+    const swiperSlides = block.querySelectorAll('.swiper-slide');
+
+    swiperSlides.forEach((slide) => {
+      const anchorElement = document.createElement('a');
+      slide.appendChild(anchorElement);
+
+      const carouselImageDiv = slide.querySelector('.carousel-image');
+      const carouselTextDiv = slide.querySelector('.carousel-text');
+
+      const anchorlinkDiv = carouselTextDiv.querySelector('a');
+      anchorElement.href = anchorlinkDiv.getAttribute("href");
+
+      anchorElement.appendChild(carouselImageDiv);
+      anchorElement.appendChild(carouselTextDiv);
+      slide.appendChild(anchorElement);
+    });
+  }else{
+    previousButton.classList.add("feature-prev");
+    nextButton.classList.add("feature-next");
   }
 
   block.parentElement.appendChild(previousButton);
@@ -24,8 +44,8 @@ export default function decorate(block) {
 
   const swiper = new Swiper(".feature .carousel-wrapper", {
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next.feature-next",
+      prevEl: ".swiper-button-prev.feature-prev",
     },
     watchSlidesProgress: true,
     spaceBetween: "27px",
@@ -39,19 +59,17 @@ export default function decorate(block) {
     },
   });
   new Swiper(".stories .carousel-wrapper", {
-    slidesPerView: 3,
+    slidesPerView: 1.4,
+    spaceBetween: "16px",
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next.stories-next",
+      prevEl: ".swiper-button-prev.stories-prev",
     },
     watchSlidesProgress: true,
     breakpoints: {
-      390: {
-        slidesPerView: 1.4,
-        spaceBetween: "16px",
-      },
       1023:{
         slidesPerView: 3,
+        spaceBetween: "0px"
       }
     },
   });

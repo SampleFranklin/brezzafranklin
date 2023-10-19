@@ -4,12 +4,14 @@ import { getMetadata } from '../../scripts/lib-franklin.js';
 export default function decorate(block) {
   const isDocumentationLanding = window.location.pathname === '/docs/';
   const list = createTag('ul');
-  const home = createTag('li', {}, '<a href="/home" class="breadcrumb-link-underline-effect">Home</a>');
+  const home = createTag('li', {}, '<a href="https://publish-p122520-e1198430.adobeaemcloud.com/us/en/brezza.html" class="breadcrumb-link-underline-effect">Home</a>');
 
   list.append(home);
 
   const category = getMetadata('category');
   const title = getMetadata('og:title');
+
+  console.log(title);
 
   if (category) {
     const section = createTag(

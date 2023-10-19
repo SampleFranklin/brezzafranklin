@@ -68,8 +68,8 @@
 }
 
 @font-face {
-  font-family: "Source Sans Pro";
-  src: url("./fonts/SourceSansPro-Regular.otf");
+  font-family: "Roboto Light";
+  src: url("./fonts/Roboto-Light.ttf");
   font-display: swap;
 }
 
@@ -142,9 +142,12 @@ dl,
 ol,
 ul,
 pre,
-blockquote {
+blockquote,
+button,
+input {
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 hr {
@@ -250,6 +253,7 @@ main {
 
   .section.left-container {
     padding-top: 40px;
+    padding-bottom: 39px;
   }
 
   .authorblock-wrapper,
