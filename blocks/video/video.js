@@ -6,6 +6,7 @@ export default function decorate(block) {
 
     const video = document.createElement('video');
     video.muted = true;
+    video.toggleAttribute('autoplay',true);
     video.toggleAttribute('controls', true);
     video.toggleAttribute('loop', true);
     video.toggleAttribute('playsinline', true);
