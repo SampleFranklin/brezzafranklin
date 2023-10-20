@@ -4,7 +4,7 @@
       "id": "library",
       "title": "Library",
       "environments": [ "edit" ],
-      "url": "https://main----brezzafranklin--samplefranklin.hlx.live/tools/sidekick/library.html",
+      "url": "https://main--brezzafranklin--samplefranklin.hlx.live/tools/sidekick/library.html",
       "includePaths": [ "**.docx**" ]
     },
     {
